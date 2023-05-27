@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.main {
+    font-family: ubuntu;
+    padding-top: 75px;
+}
+
+.contact {
+    display: flex;
+    width: 100%;
+    margin-top: -30px;
+    margin-bottom: 100px;
+}
+
+
+
+.contactright {
+    display: flex;
+    margin: auto;
+
+}
+
+.contactrightsmall {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 20px;
+}
+
+.contactrightsmallform {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 20px;
+}
+
+.name {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.firstname {
+    display: flex;
+    flex-direction: column;
+}
+
+.lastname {
+    display: flex;
+    flex-direction: column;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+}
+
+.bookbutton {
+    font-family: 'ubuntu';
+    display: flex;
+    justify-content: center;
+    transition: all 500ms ease-in-out;
+    align-items: center;
+    text-align: center;
+    border: none;
+    background: #206a5d;
+    color: white;
+    font-size: 19px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    height: 50px;
+
+}
+
+.bookbutton:hover {
+    background: #1e5e4e;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    scale: 1.06;
+}
+
+.contactinput {
+    height: 30px;
+    background-color: #f2f2f2;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contactleft {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    padding: 50px;
+    gap: 20px;
+}
+
+.contactleft1 {
+    font-size: 50px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactleft2 {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.contactleft3 {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    gap: 16px;
+    font-size: 30px;
+    color: #1e5e4e;
+}
+
+.contactleft4 {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.aboutbutton {
+    font-family: 'ubuntu';
+    display: flex;
+    justify-content: center;
+    transition: all 500ms ease-in-out;
+    align-items: center;
+    text-align: center;
+    border: none;
+    background: #206a5d;
+    color: white;
+    font-size: 19px;
+    padding: 10px;
+    border-radius: 10px;
+
+    height: 40px;
+}
+
+.aboutbutton:hover {
+    scale: 1.04;
+    ;
+    cursor: pointer;
+}
+
+.iconlinks {
+    color: #1e5e4e;
+}
+
+.iconlinks:hover {
+    transition: all 200ms ease;
+    cursor: pointer;
+    scale: 1.04;
+}
+
+.star {
+    color: red;
+    font-weight: 400;
+}
+
+.contactinput:-webkit-autofill,
+.contactinput:-webkit-autofill:hover,
+.contactinput:-webkit-autofill:focus,
+.contactinput:-webkit-autofill:active {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: black !important;
+}
+
+.note {
+    font-size: 12px;
+}
+
+.about {
+    padding-top: 75px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    background-image: url('https://res.cloudinary.com/dgfn40mfc/image/upload/v1685045529/Important%20image/c3f798e8566d8bc3c49338ab28331ca6_ytl36c.jpg');
+    min-height: 100vh;
+}
+
+.about1 {
+    display: flex;
+    margin: auto;
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 50px;
+    color: #000000;
+}
+
+.about2 {
+    display: flex;
+    width: 100%;
+    gap: 20%;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    margin-top: 50px;
+}
+
+.aboutcard {
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.aboutcarddata {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutcarddata3 {
+    margin: auto;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.cofounderimage {
+    height: 260px;
+    width: 260px;
+
+    background-repeat: no-repeat;
+}
+
+.aboutcarddata1 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.aboutcarddata2 {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.aboutleft3 {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-top: 20px;
+    gap: 20px;
+    font-size: 30px;
+    color: #000000;
+}
+
+.about3 {
+    background-color: #eff2f4;
+
+    margin-top: -80px;
+    padding-bottom: 50px;
+}
+
+.content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.content1 {
+    font-weight: 500;
+}
+
+@media screen and (max-width:1416px) {
+    .contactleft {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .contactleft1 {
+        font-size: 50px;
+    }
+
+    .contactleft2 {
+        width: 90%;
+    }
+
+
+}
+
+@media screen and (max-width:976px) {
+    .contactleft1 {
+        font-size: 50px;
+    }
+
+    .contactleft2 {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .contactleft1 {
+        width: 100%;
+    }
+
+    .contactleft2 {
+        width: 100%;
+    }
+
+    .contactleft3 {
+        width: 100%;
+    }
+
+    .contactleft4 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:875px) {
+    .contact {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .contactleft2 {
+        width: 80%;
+    }
+
+    .contactleft {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width:470px) {
+    .contactleft {
+        width: 60%;
+    }
+
+    .contactright {
+        width: 90%;
+        padding: 5px;
+    }
+
+    .contactrightsmallform {
+        width: 100%;
+        padding: 0;
+    }
+
+    .name {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:1115px) {
+    .about2 {
+        gap: 5%;
+    }
+}
+
+@media screen and (max-width:1115px) {
+
+
+    .about2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        gap: 50%;
+    }
+
+    .aboutcard {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+
+}
+
+@media screen and (max-width:847px) {
+    .aboutcard {
+        width: 350px;
+    }
+
+    .cofounderimage {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:414px) {
+    .aboutcard {
+        width: 300px;
+    }
+}

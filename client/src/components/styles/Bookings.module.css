@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    padding-top: 75px;
+    width: 100%;
+    font-family: ubuntu;
+    background: linear-gradient(-109.6deg, rgb(72, 200, 160) 19.2%, rgb(32, 40, 48) 81.3%);
+}
+
+.up {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    margin-top: 60px;
+    height: 100px;
+    border-radius: 20px;
+    padding: 20px;
+    gap: 30px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    color: white;
+}
+
+.mid {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+
+}
+
+.bookbutton {
+    font-family: 'ubuntu';
+    display: flex;
+    justify-content: center;
+    transition: all 500ms ease-in-out;
+    align-items: center;
+    text-align: center;
+    border: none;
+    background: #206a5d;
+    color: white;
+    font-size: 19px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.bookbutton:hover {
+    background: #1e5e4e;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    scale: 1.06;
+}
+
+
+.upright {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.uprightname {
+    font-size: 35px;
+}
+
+.uprightemail {
+    font-size: 15px;
+    font-weight: 100;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.mailicon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.upleft {
+    display: flex;
+    align-items: center;
+}
+
+.profilepic {
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+}
+
+.down {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    min-height: 350px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
+    grid-gap: 4rem;
+    padding-bottom: 100px;
+}
+
+@media screen and (max-width: 1115px) {
+    .upright {
+        width: 35%;
+    }
+
+    .up {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 836px) {
+    .upright {
+        width: 50%;
+    }
+
+    .up {
+        width: 83%;
+    }
+}
+
+@media screen and (max-width: 615px) {
+
+    .uprightname {
+        font-size: 25px;
+    }
+
+    .uprightemail {
+        font-size: 12px;
+    }
+
+    .profilepic {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 454px) {
+
+    .uprightname {
+        font-size: 22px;
+    }
+
+    .uprightemail {
+        font-size: 10px;
+    }
+
+    .profilepic {
+        height: 50px;
+        width: 50px;
+    }
+
+    .up {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 454px) {
+
+    .uprightname {
+        font-size: 18px;
+    }
+}
+
+.hidebooking {
+    display: none;
+    visibility: hidden;
+}

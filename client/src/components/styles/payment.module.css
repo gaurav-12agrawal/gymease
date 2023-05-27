@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.container {
+    padding-top: 75px;
+
+}
+
+.card {
+    font-family: ubuntu;
+    display: flex;
+    height: 50vh;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    margin-top: 10%;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 100px;
+    background-color: #ecf1f4;
+}
+
+.para {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.detailsbutton {
+    font-family: 'ubuntu';
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    transition: all 500ms ease-in-out;
+    align-items: center;
+    text-align: center;
+    padding: 7px;
+    border: none;
+    border-radius: 2px;
+    background-color: #1e5e4e;
+
+    color: white;
+    font-size: 15px;
+    margin-top: 20px;
+
+}
+
+.detailsbutton:hover {
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+}
+
+.coupon {
+    margin-top: 30px;
+}
+
+.coupon1 {
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.coupon2 {
+    margin-right: 30px;
+    border: none;
+    border-bottom: 1px solid;
+    background-color: #ecf1f4;
+    margin-top: 20px;
+
+}
+
+.coupon2:focus {
+    background-color: #ecf1f4;
+}
+
+.coupon3 {
+    border: none;
+    background-color: #1e5e4e;
+    color: white;
+    padding: 5px;
+    background-color: rgb(4, 165, 44);
+    border-radius: 5px;
+}
+
+.coupon3:hover {
+    scale: 1.04;
+    cursor: pointer;
+}
+
+.coupon2:-webkit-autofill,
+.coupon2:-webkit-autofill:hover,
+.coupon2:-webkit-autofill:focus,
+.coupon2:-webkit-autofill:active {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: rgb(0, 0, 0) !important;
+}
+
+
+@media screen and (max-width: 640px) {
+    .card {
+        width: 80%;
+    }
+}

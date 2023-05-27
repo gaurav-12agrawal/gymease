@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.container {
+    padding-top: 75px;
+}
+
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+    width: 80%;
+}
+
+.eachdiv {
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.eachinput {
+    width: 80%;
+    height: 33px;
+    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.label {
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.submit {
+    font-family: 'Ubuntu', sans-serif;
+    height: 36px;
+    width: 120px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(123, 211, 252);
+    border: none;
+    color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.eachinput:-webkit-autofill,
+.eachinput:-webkit-autofill:hover,
+.eachinput:-webkit-autofill:focus,
+.eachinput:-webkit-autofill:active {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: rgb(0, 0, 0) !important;
+}

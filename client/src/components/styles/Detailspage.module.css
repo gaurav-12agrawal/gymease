@@ -1,0 +1,711 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.maincontainer {
+    padding-top: 75px;
+    font-family: 'ubuntu';
+}
+
+.carouseldiv {
+    height: 500px;
+    width: 86%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 7px;
+    text-align: center;
+
+}
+
+.cardimages {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.prevbutton {
+    height: 10%;
+    position: absolute;
+    top: 300px;
+    left: 10%;
+    right: 100px;
+    width: 70px;
+    background-color: transparent;
+    border: 0;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.nextbutton {
+    height: 10%;
+    position: absolute;
+    top: 300px;
+    right: 10%;
+    width: 70px;
+    background-color: transparent;
+    border: 0;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.prevbutton:hover {
+    cursor: pointer;
+    box-shadow: 0 0 11px rgba(33, 33, 33, .4);
+    transition: all 200ms ease-in;
+
+}
+
+.nextbutton:hover {
+    cursor: pointer;
+    box-shadow: 0 0 11px rgba(33, 33, 33, .4);
+    transition: all 200ms ease-in;
+
+}
+
+.nameadd {
+    width: 86%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 7px;
+
+}
+
+.name {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.add {
+    margin-top: 20px;
+}
+
+.fulladd {
+    width: 86%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* box-shadow: 0 0 11px rgba(33, 33, 33, .1); */
+    border-radius: 7px;
+    align-items: center;
+
+}
+
+.fulladdleft {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fulladdright {
+
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.directionbutton {
+    display: flex;
+
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 20px;
+    background-color: rgb(4, 165, 44);
+    font-family: 'ubuntu';
+    border-radius: 7px;
+    border: none;
+    transition: all 500ms ease-in-out;
+    color: white;
+    margin-right: 5%;
+}
+
+.directionbutton:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .4);
+    cursor: pointer;
+}
+
+.anchor {
+    height: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+
+}
+
+.booking {
+    display: flex;
+    width: 86%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    gap: 50px;
+
+}
+
+.bookingright {
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    width: 50%;
+    gap: 20px;
+}
+
+.bookingleft {
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    width: 50%;
+    gap: 20px;
+
+}
+
+.bookingleft1 {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .1);
+    border-radius: 7px;
+    min-height: 80px;
+    display: flex;
+    padding: 15px;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.bookingright1 {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .1);
+    border-radius: 7px;
+    height: 50px;
+    display: flex;
+    padding: 10px;
+    gap: 10%;
+    align-items: center;
+    display: flex;
+}
+
+.trainerbotton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 13px;
+    width: 25%;
+    padding: 5px;
+    background-color: rgb(4, 165, 44);
+    font-family: 'ubuntu';
+    border-radius: 7px;
+    border: none;
+    transition: all 500ms ease-in-out;
+    color: white;
+    box-shadow: 0 0 11px rgba(33, 33, 33, .6);
+
+}
+
+.trainerbotton:hover {
+    cursor: pointer;
+    transition: transform .2s;
+    transform: scale(1.2);
+}
+
+.bookings1 {
+    width: 25%;
+}
+
+.adminbutton {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    gap: 50px;
+}
+
+.deletebutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 15px;
+    width: 13%;
+    height: 45px;
+    background-color: rgb(242, 76, 76);
+    font-family: 'ubuntu';
+    border-radius: 7px;
+    border: none;
+    transition: all 500ms ease-in-out;
+    color: white;
+    box-shadow: 0 0 11px rgba(33, 33, 33, .6);
+}
+
+.deletebutton:hover {
+    cursor: pointer;
+}
+
+.editbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 15px;
+    width: 100%;
+    height: 45px;
+    background-color: rgb(76, 178, 242);
+    font-family: 'ubuntu';
+    border-radius: 7px;
+    border: none;
+    transition: all 500ms ease-in-out;
+    color: white;
+    box-shadow: 0 0 11px rgba(33, 33, 33, .3);
+}
+
+.editbutton:hover {
+    cursor: pointer;
+}
+
+.editLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 15px;
+    width: 13%;
+    height: 45px;
+    background-color: rgb(76, 178, 242);
+    font-family: 'ubuntu';
+    border-radius: 7px;
+    border: none;
+    transition: all 500ms ease-in-out;
+    color: white;
+    box-shadow: 0 0 11px rgba(33, 33, 33, .3);
+}
+
+.review {
+
+    display: flex;
+    width: 85%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1%;
+    gap: 10px;
+}
+
+.rangeline {
+    width: 50%;
+}
+
+.commentbox {
+    width: 50%;
+    height: 50px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.reviewbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 15px;
+    height: 30px;
+    background-color: rgb(76, 178, 242);
+    font-family: 'ubuntu';
+    border-radius: 4px;
+    border: none;
+    transition: all 100ms ease-in-out;
+    color: white;
+    box-shadow: 0 0 11px rgba(33, 33, 33, .1);
+    margin-top: 20px;
+    padding: 6px;
+}
+
+.reviewbutton:hover {
+    cursor: pointer;
+    box-shadow: 0 0 11px rgba(33, 33, 33, .5);
+}
+
+.downhr {
+    margin-top: 15px;
+}
+
+.reviewshere {
+    width: 87%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: auto;
+}
+
+.reviewheading {
+    display: flex;
+    margin: 20px;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+.singlereview {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+}
+
+.reviewername {
+    font-size: 12px;
+}
+
+.reviewerstars {
+    font-size: 14px;
+}
+
+.deletereviewbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: red;
+    font-family: 'ubuntu';
+    border: none;
+    color: white;
+    padding: 3px;
+    border-radius: 4px;
+    font-size: 12px;
+
+    width: 60px;
+    transition: all 100ms ease-in;
+}
+
+.deletereviewbutton:hover {
+    cursor: pointer;
+    box-shadow: 0 0 11px rgba(33, 33, 33, .4);
+
+}
+
+.editreviewbutton:hover {
+    cursor: pointer;
+    box-shadow: 0 0 11px rgba(33, 33, 33, .4);
+
+}
+
+.editreviewbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(76, 178, 242);
+    width: 60px;
+    font-family: 'ubuntu';
+    border: none;
+    color: white;
+    padding: 3px;
+    border-radius: 4px;
+    font-size: 12px;
+
+
+    transition: all 100ms ease-in;
+}
+
+.seereviewbutton {
+    display: flex;
+    gap: 20px;
+}
+
+/* css for star rating */
+
+
+.starabilityresult {
+    position: relative;
+    width: 150px;
+    height: 30px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAA8CAMAAABGivqtAAAAxlBMVEUAAACZmZn2viTHuJ72viOampqampr1viSampr3vySampqdnZ34wiX1vSSampr1vSOZmZmampr1viT2vSOampr2viT2viSampr2viSampr2vyX4vyWbm5v3vSSdnZ32wSadnZ36wCWcnJyZmZn/wSr/2ySampr2vSP2viSZmZn2vSSZmZn2vST2viSampr2viSbm5ubm5uZmZn1vSSampqbm5v2vSWampqampr3vSf5wiT5vyagoKD/xCmkpKT/yCSZmZn1vSO4V2dEAAAAQHRSTlMA+vsG9fO6uqdgRSIi7+3q39XVqZWVgnJyX09HPDw1NTAwKRkYB+jh3L6+srKijY2Ef2lpYllZUU5CKigWFQ4Oneh1twAAAZlJREFUOMuV0mdzAiEQBmDgWq4YTWIvKRqT2Htv8P//VJCTGfYQZnw/3fJ4tyO76KE0m1b2fZu+U/pu4QGlA7N+Up5PIz9d+cmkbSrSNr9seT3GKeNYIyeO5j16S28exY5suK0U/QKmmeCCX6xs22hJLVkitMImxCvEs8EG3SCRCN/ViFPqnq5epIzZ07QJJvkM9Tkz1xnkmXbfSvR7f4H8AtXBkLGj74mMvjM1+VHZpAZ4LM4K/LBWEI9jwP71v1ZEQ6dyvQMf8A/1pmdZnKce/VH1iIsdte4U8VEtY23xOujxtFpWDgKbfjD2YeEhY0OzfjGeLyO/XfnNpAcmcjDwKOXRfU1IyiTRyEkaiz67pb9oJHJb9vVqKfgjLBPyF5Sq9T0KmSUhQmtiQrJGPHVi0DoSabj31G2gW3buHd0pY85lNdcCk8xlNDPXMuSyNiwl+theIb9C7RLIpKvviYy+M6H8qGwSAp6Is19+GP6KxwnggJ/kq6Jht5rnRQA4z9zyRRaXssvyqp5I6Vutv0vkpJaJtnjpz/8B19ytIayazLoAAAAASUVORK5CYII=");
+    font-size: 0.1em;
+    color: transparent;
+}
+
+.starabilityresult:after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    height: 30px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAA8CAMAAABGivqtAAAAxlBMVEUAAACZmZn2viTHuJ72viOampqampr1viSampr3vySampqdnZ34wiX1vSSampr1vSOZmZmampr1viT2vSOampr2viT2viSampr2viSampr2vyX4vyWbm5v3vSSdnZ32wSadnZ36wCWcnJyZmZn/wSr/2ySampr2vSP2viSZmZn2vSSZmZn2vST2viSampr2viSbm5ubm5uZmZn1vSSampqbm5v2vSWampqampr3vSf5wiT5vyagoKD/xCmkpKT/yCSZmZn1vSO4V2dEAAAAQHRSTlMA+vsG9fO6uqdgRSIi7+3q39XVqZWVgnJyX09HPDw1NTAwKRkYB+jh3L6+srKijY2Ef2lpYllZUU5CKigWFQ4Oneh1twAAAZlJREFUOMuV0mdzAiEQBmDgWq4YTWIvKRqT2Htv8P//VJCTGfYQZnw/3fJ4tyO76KE0m1b2fZu+U/pu4QGlA7N+Up5PIz9d+cmkbSrSNr9seT3GKeNYIyeO5j16S28exY5suK0U/QKmmeCCX6xs22hJLVkitMImxCvEs8EG3SCRCN/ViFPqnq5epIzZ07QJJvkM9Tkz1xnkmXbfSvR7f4H8AtXBkLGj74mMvjM1+VHZpAZ4LM4K/LBWEI9jwP71v1ZEQ6dyvQMf8A/1pmdZnKce/VH1iIsdte4U8VEtY23xOujxtFpWDgKbfjD2YeEhY0OzfjGeLyO/XfnNpAcmcjDwKOXRfU1IyiTRyEkaiz67pb9oJHJb9vVqKfgjLBPyF5Sq9T0KmSUhQmtiQrJGPHVi0DoSabj31G2gW3buHd0pY85lNdcCk8xlNDPXMuSyNiwl+theIb9C7RLIpKvviYy+M6H8qGwSAp6Is19+GP6KxwnggJ/kq6Jht5rnRQA4z9zyRRaXssvyqp5I6Vutv0vkpJaJtnjpz/8B19ytIayazLoAAAAASUVORK5CYII=");
+    background-position: 0 -30px;
+}
+
+.starabilityresult[data-rating="5"]::after {
+    width: 150px;
+}
+
+.starabilityresult[data-rating="4"]::after {
+    width: 120px;
+}
+
+.starabilityresult[data-rating="3"]::after {
+    width: 90px;
+}
+
+.starabilityresult[data-rating="2"]::after {
+    width: 60px;
+}
+
+.starabilityresult[data-rating="1"]::after {
+    width: 30px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (min-resolution: 192dpi) {
+    .starabilityresult {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAB4CAMAAACZ62E6AAABAlBMVEUAAACZmZmampr2vSObm5v/yiufn5+ampr1viP1viSZmZn2viOZmZmampqampr2viSampqampqcnJz5vyScnJz3wSf/wyn/xiujo6Oqqqr/0C/1vSOampr2viP2viOampr2viP2vST2viOampqampqampr1vyP3viSampr2vyT4vyX3viSbm5ubm5v5wCT8xSmgoKCampqampr3vyb2wiWenp72viOampqZmZmampr2viP2viP1viSampqbm5v2vyT3viObm5v4vyadnZ34wSSbm5v2viSZmZn2viP2vST2viP2viT1viOZmZn2viT2viX3viT3vyb2vyOZmZn1vSOZmZlNN+fKAAAAVHRSTlMA9uz4PQwS8O7r5+fTw4yMelw2MB0dFRELBgbS+/Hfu7uxqKWdg4N7ZmZMPi8pKRgPs0w7Nhb14drKw6Gck21tXkNDIyMZ1rDLycTBtaqVknlfV0sGP8ZwAAADW0lEQVRYw9zWvYqDQBSG4TPDoCAqKhYKQgoVLFaIgZCkiCBBUqVazv3fyu4aEXWdM85Uy779A+LP58AfTQgw73AwtxFiZIwbxMbUfuB3H4b49YNfZrbGodoI52+cm9hH9sbZwwAXOFbo2zjDsSzWxnecuuvaM8MpdtbEPs7y9azF5phZWrjERaWOPdpLbB81cICrgv3W4mvMLbU6RmFQeA5u5HhFEEbHLdWLsMxvHJXxW16Goh+ZqPyny1Az5j79SsCJoWHsBNAxQ9sNF26bWFuMC8v1LY+mmeTadjaqtaNnnXoxWBcde1nNWnzdb68xrOqvu22/MTzuPutujpJ122NvluSb8tTWk85CclDZQwLS0oa2TQpEKacsJy0kSJaQOKJxROKKxhWJ7zS+k9ijsUdim8Y2ZWNUFBP4pMKfOv8onX9WrsI5gd3VVLXtatxcuU0znGUHCUAS2DgrS6mT6hTzrXEjfIZj5Dk2xKkihqm4wKlQfQRqalhUP9UHo3FIPAG/Et44JVLsDDf0JHmB3OEByOwZES8hSAsviGjBdh3ylh6plmMnW4IyAUVJWcE/76vTell1EIaiMBwIAcWBA9GC0lIdKFXQQUsHVVCklN7ojf3+z3JOxYqK2TH555+K6CJJQtRbr9XtDmCnjH0AX9Va8J+liIMvDtRsCk2pEs6hKVexR2g7KuDihwt5a9MfprY0fkLXU9ZmFLpoJolN6GXKWWfZx0tHCocwKJSxC22ItYUEjmBUJHFjfYz1xQxlfaLiZsBExq2IPtbkNbLtOwwuGgjTLkH43mYtSzam7+1Bsr3nm5uExBQUozEh9V7N7uvmwZcqdpm0C6vJW63bZEuXtbrV2zpDzhrpYLBWMnY1mjV7JWFtMio7zbWniWFxvHnWm1yGxXmOPXP+L3YV2ysjnNhaZNeMcHPvuL27BMnVMaujljBAYyje4niH4g2ONyh+4PiB4gOODyjWcKxh1gZBNoJjEY4R/BLhF4IDEQ4QPBoEoyxH4+bxrUsHyxwxQlg0WHXqYifVLmo67cKY/UtaXFxBV26TLjuHrkp8BPJTMij1xQejdkgO24nf7dBOCRcbzQuNOR9Qs64GzzrfQa8It2oFAA6Zrga9xEeq1KHmLUHIiCAWInsg1x/MLqkMsItF8QAAAABJRU5ErkJggg==");
+        background-size: 30px auto;
+    }
+
+    .starabilityresult:after {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAB4CAMAAACZ62E6AAABAlBMVEUAAACZmZmampr2vSObm5v/yiufn5+ampr1viP1viSZmZn2viOZmZmampqampr2viSampqampqcnJz5vyScnJz3wSf/wyn/xiujo6Oqqqr/0C/1vSOampr2viP2viOampr2viP2vST2viOampqampqampr1vyP3viSampr2vyT4vyX3viSbm5ubm5v5wCT8xSmgoKCampqampr3vyb2wiWenp72viOampqZmZmampr2viP2viP1viSampqbm5v2vyT3viObm5v4vyadnZ34wSSbm5v2viSZmZn2viP2vST2viP2viT1viOZmZn2viT2viX3viT3vyb2vyOZmZn1vSOZmZlNN+fKAAAAVHRSTlMA9uz4PQwS8O7r5+fTw4yMelw2MB0dFRELBgbS+/Hfu7uxqKWdg4N7ZmZMPi8pKRgPs0w7Nhb14drKw6Gck21tXkNDIyMZ1rDLycTBtaqVknlfV0sGP8ZwAAADW0lEQVRYw9zWvYqDQBSG4TPDoCAqKhYKQgoVLFaIgZCkiCBBUqVazv3fyu4aEXWdM85Uy779A+LP58AfTQgw73AwtxFiZIwbxMbUfuB3H4b49YNfZrbGodoI52+cm9hH9sbZwwAXOFbo2zjDsSzWxnecuuvaM8MpdtbEPs7y9azF5phZWrjERaWOPdpLbB81cICrgv3W4mvMLbU6RmFQeA5u5HhFEEbHLdWLsMxvHJXxW16Goh+ZqPyny1Az5j79SsCJoWHsBNAxQ9sNF26bWFuMC8v1LY+mmeTadjaqtaNnnXoxWBcde1nNWnzdb68xrOqvu22/MTzuPutujpJ122NvluSb8tTWk85CclDZQwLS0oa2TQpEKacsJy0kSJaQOKJxROKKxhWJ7zS+k9ijsUdim8Y2ZWNUFBP4pMKfOv8onX9WrsI5gd3VVLXtatxcuU0znGUHCUAS2DgrS6mT6hTzrXEjfIZj5Dk2xKkihqm4wKlQfQRqalhUP9UHo3FIPAG/Et44JVLsDDf0JHmB3OEByOwZES8hSAsviGjBdh3ylh6plmMnW4IyAUVJWcE/76vTell1EIaiMBwIAcWBA9GC0lIdKFXQQUsHVVCklN7ojf3+z3JOxYqK2TH555+K6CJJQtRbr9XtDmCnjH0AX9Va8J+liIMvDtRsCk2pEs6hKVexR2g7KuDihwt5a9MfprY0fkLXU9ZmFLpoJolN6GXKWWfZx0tHCocwKJSxC22ItYUEjmBUJHFjfYz1xQxlfaLiZsBExq2IPtbkNbLtOwwuGgjTLkH43mYtSzam7+1Bsr3nm5uExBQUozEh9V7N7uvmwZcqdpm0C6vJW63bZEuXtbrV2zpDzhrpYLBWMnY1mjV7JWFtMio7zbWniWFxvHnWm1yGxXmOPXP+L3YV2ysjnNhaZNeMcHPvuL27BMnVMaujljBAYyje4niH4g2ONyh+4PiB4gOODyjWcKxh1gZBNoJjEY4R/BLhF4IDEQ4QPBoEoyxH4+bxrUsHyxwxQlg0WHXqYifVLmo67cKY/UtaXFxBV26TLjuHrkp8BPJTMij1xQejdkgO24nf7dBOCRcbzQuNOR9Qs64GzzrfQa8It2oFAA6Zrga9xEeq1KHmLUHIiCAWInsg1x/MLqkMsItF8QAAAABJRU5ErkJggg==");
+        background-size: 30px auto;
+    }
+}
+
+.starsinput {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.popupwindow {
+
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 5000000;
+    margin: auto;
+    transition: all 400ms ease-in-out;
+
+}
+
+.popupwindowinner {
+    transition: all 400ms ease-in-out;
+    opacity: 1;
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    left: 25%;
+    top: 100px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    margin: auto;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.crossimage {
+    transition: all 400ms ease-in-out;
+
+    height: 100%;
+    width: 100%;
+    top: 100px;
+}
+
+.hidepopup {
+    transition: all 400ms ease-in-out;
+
+    transform: translate(-1000px);
+}
+
+.cross {
+    transition: all 400ms ease-in-out;
+    border-radius: 50px;
+    box-shadow: 0 0 11px rgba(33, 33, 33, 1);
+    font-size: 30px;
+    color: white;
+    font-weight: bolder;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 30px;
+    padding: 5px;
+}
+
+
+.cross:hover {
+    cursor: pointer;
+}
+
+.editratingdiv {
+    display: block;
+    padding: 50px;
+}
+
+.editpopreviewbutton {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 15px;
+    height: 30px;
+    background-color: rgb(76, 178, 242);
+    font-family: 'ubuntu';
+    border-radius: 4px;
+    border: none;
+    transition: all 100ms ease-in-out;
+    color: white;
+    box-shadow: 0 0 11px rgba(33, 33, 33, .1);
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.editpopreviewbutton:hover {
+    cursor: pointer;
+}
+
+.editcommentbox {
+    width: 95%;
+    height: 200px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 970px) {
+    .trainerbotton {
+        font-size: 10px;
+    }
+
+    .popupwindowinner {
+        width: 60%;
+        left: 20%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .carouseldiv {
+        height: 350px;
+    }
+
+    .prevbutton {
+        top: 230px;
+    }
+
+    .nextbutton {
+        top: 230px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .booking {
+        flex-direction: column-reverse;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        gap: 50px;
+    }
+
+    .bookingleft {
+        width: 100%;
+    }
+
+    .popupwindowinner {
+        width: 70%;
+        left: 15%;
+    }
+
+    .bookingright {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 646px) {
+    .fulladd {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .fulladdleft {
+        width: 100%;
+    }
+
+    .fulladdright {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .popupwindowinner {
+        width: 85%;
+        left: 10%;
+    }
+
+    .directionbutton {
+        flex-direction: row;
+        font-size: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media screen and (max-width: 609px) {
+    .carouseldiv {
+        height: 240px;
+    }
+
+    .prevbutton {
+        top: 170px;
+        font-size: 33px;
+    }
+
+    .nextbutton {
+        top: 170px;
+        font-size: 33px;
+    }
+
+}
+
+@media screen and (max-width: 419px) {
+    .bookings1 {
+        font-size: 12px;
+    }
+
+    .popupwindowinner {
+        width: 90%;
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 312px) {
+    .bookings1 {
+        font-size: 10px;
+    }
+
+}
