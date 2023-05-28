@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require('dotenv')
 dotenv.config({ path: './.env' })
 const cors = require('cors')
+
 const port = process.env.PORT || 5000
 require('./db/conn')
 const router = require('./Router/router')
@@ -13,7 +14,7 @@ const reviewrouter = require('./Router/reviewrouter')
 const superadminrouter = require('./Router/superadminrouter')
 const paymentrouter = require('./Router/paymentrouter')
 app.use(express.json());
-
+app.use(cors())
 
 app.use(router)
 app.use(userrouter)
