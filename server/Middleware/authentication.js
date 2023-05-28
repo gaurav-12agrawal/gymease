@@ -9,6 +9,7 @@ const authenticate = async (req, res, next) => {
     try {
         const token = req.cookies.jwtoken;
         const verifyToken = jwt.verify(token, process.env.MY_SECRET);
+        console.log(token, verifyToken._id)
         const rootUser = await User.findOne({ _id: verifyToken._id });
         if (!rootUser) {
             console.log('asdf')
