@@ -26,7 +26,9 @@ function Mybooking() {
                 method: "GET",
                 headers: {
                     Accept: 'application/json',
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin':
+                        'https://gymease.netlify.app'
                 },
                 credentials: 'include'
             })
