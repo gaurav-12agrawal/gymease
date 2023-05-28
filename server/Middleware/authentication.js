@@ -7,6 +7,7 @@ app.use(cookieParser());
 
 const authenticate = async (req, res, next) => {
     try {
+        res.header("Access-Control-Allow-Origin", "https://gymease.netlify.app");
         const token = req.cookies.jwtoken;
         const verifyToken = jwt.verify(token, process.env.MY_SECRET);
         console.log('hello')
