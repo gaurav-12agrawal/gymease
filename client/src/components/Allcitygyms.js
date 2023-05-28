@@ -25,7 +25,7 @@ const Allcitygyms = () => {
     const getdata = async (e) => {
         let res;
         try {
-            res = await fetch(`/getgym/${city}`, {
+            res = await fetch(`https://gym-54v4.onrender.com/getgym/${city}`, {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json'

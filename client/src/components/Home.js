@@ -17,7 +17,7 @@ function Home() {
     const handleClick = async (e) => {
 
         const city = e.target.innerText
-        navigate(`https://gym-54v4.onrender.com/allcitygyms/${city}`)
+        navigate(`/allcitygyms/${city}`)
     }
 
     const navigate = useNavigate();
