@@ -14,9 +14,7 @@ const reviewrouter = require('./Router/reviewrouter')
 const superadminrouter = require('./Router/superadminrouter')
 const paymentrouter = require('./Router/paymentrouter')
 app.use(express.json());
-app.use(cors({
-    origin: "http//localhost:3000"
-}))
+app.use(cors())
 
 app.use(router)
 app.use(userrouter)
