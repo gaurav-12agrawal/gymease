@@ -15,7 +15,8 @@ const superadminrouter = require('./Router/superadminrouter')
 const paymentrouter = require('./Router/paymentrouter')
 app.use(express.json());
 app.use(cors({
-    origin: "https://gymease.netlify.app"
+    origin: "https://gymease.netlify.app",
+    "preflightContinue": true
 }))
 
 app.use(router)
