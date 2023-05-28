@@ -51,7 +51,7 @@ userrouter.post('/register', validateuser, async (req, res) => {
                 subject: 'GymEase - Verify Your Email',
                 html: `<h1>${user.name} Thanks for Registration</h1>
                        <h5>Please verify your email to continue...</h5>
-                       <a href="https://gymease.netlify.app/user/verifyemail?token=${user.emailtoken} " >verify Here</a>
+                       <a href="https://gym-54v4.onrender.com/user/verifyemail?token=${user.emailtoken} " >verify Here</a>
                 `
             }
             //send mail

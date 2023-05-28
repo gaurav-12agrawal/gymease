@@ -108,7 +108,7 @@ paymentrouter.post('/gym/:id/paymentform', authenticate, upload.array('image'), 
         subject: "Verify your id for payment information",
         html: `<h1>${req.body.yname} Thanks for choosing us</h1>
                        <h5>Please verify your email...</h5>
-                       <a href="https://gymease.netlify.app/item/verifyemail/${token}/${email} " >verify Here</a>`
+                       <a href="https://gym-54v4.onrender.com/item/verifyemail/${token}/${email} " >verify Here</a>`
     }
     //send mail
     transporter2.sendMail(mailOptions, (error, info) => {
