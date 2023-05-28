@@ -103,7 +103,7 @@ const Payment = () => {
     const checkdata = async () => {
         let res;
         try {
-            res = await fetch(`/getsinglegym/${id}/payment`, {
+            res = await fetch(`https://gym-54v4.onrender.com/getsinglegym/${id}/payment`, {
                 method: "GET",
                 headers: {
                     Accept: 'application/json',

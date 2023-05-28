@@ -28,7 +28,7 @@ const Adminlogin = () => {
             )
         }
         try {
-            res = await fetch('/signinadminringrg', {
+            res = await fetch('https://gym-54v4.onrender.com/signinadminringrg', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

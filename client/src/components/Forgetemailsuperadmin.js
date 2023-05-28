@@ -26,7 +26,7 @@ const Forgetemailsuperadmin = () => {
                 theme: "dark",
             }))
         }
-        const res = await fetch("/sendpasswordlinkadmin", {
+        const res = await fetch("https://gym-54v4.onrender.com/sendpasswordlinkadmin", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

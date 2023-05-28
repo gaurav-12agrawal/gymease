@@ -108,7 +108,7 @@ const Setdataform = () => {
         let res;
 
         try {
-            res = await fetch('/setgyms', {
+            res = await fetch('https://gym-54v4.onrender.com/setgyms', {
                 method: 'POST',
                 body: formData
             })
@@ -163,7 +163,7 @@ const Setdataform = () => {
 
         let res5;
         try {
-            res5 = await fetch(`/admin/isadmin`, {
+            res5 = await fetch(`https://gym-54v4.onrender.com/admin/isadmin`, {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json'

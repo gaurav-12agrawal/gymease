@@ -27,7 +27,7 @@ const Superadminlogin = () => {
             )
         }
         try {
-            res = await fetch('/login/super/admin/rinesh', {
+            res = await fetch('https://gym-54v4.onrender.com/login/super/admin/rinesh', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

@@ -22,7 +22,7 @@ const Forgetpassword = () => {
 
     const userValid = async () => {
         setload(true)
-        const res = await fetch(`/forgotpassword/${id}/${token}`, {
+        const res = await fetch(`https://gym-54v4.onrender.com/forgotpassword/${id}/${token}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -76,7 +76,7 @@ const Forgetpassword = () => {
             )
         }
         setload(true)
-        const res = await fetch(`/${id}/${token}`, {
+        const res = await fetch(`https://gym-54v4.onrender.com/${id}/${token}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

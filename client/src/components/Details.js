@@ -37,7 +37,7 @@ const Details = () => {
     const getdata = async (e) => {
         let res;
         try {
-            res = await fetch(`/getsinglegym/${id}`, {
+            res = await fetch(`https://gym-54v4.onrender.com/getsinglegym/${id}`, {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json'
@@ -68,7 +68,7 @@ const Details = () => {
 
         let res5;
         try {
-            res5 = await fetch(`/user/islogin`, {
+            res5 = await fetch(`https://gym-54v4.onrender.com/user/islogin`, {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json'
@@ -99,7 +99,7 @@ const Details = () => {
 
         let res2
         try {
-            res2 = await fetch(`/deletecard/${id}`, {
+            res2 = await fetch(`https://gym-54v4.onrender.com/deletecard/${id}`, {
 
                 method: 'DELETE',
                 headers: {
@@ -155,7 +155,7 @@ const Details = () => {
 
 
     const Editcard = async (id) => {
-        const res3 = await fetch(`/iseditable/${id}`, {
+        const res3 = await fetch(`https://gym-54v4.onrender.com/iseditable/${id}`, {
 
             method: 'GET',
             headers: {
@@ -195,7 +195,7 @@ const Details = () => {
 
             )
         }
-        const res3 = await fetch(`/detials/${getgymdata._id}/reviews`, {
+        const res3 = await fetch(`https://gym-54v4.onrender.com/detials/${getgymdata._id}/reviews`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -265,7 +265,7 @@ const Details = () => {
         let res3
         console.log(id, reviewId)
         try {
-            res3 = await fetch(`/detials/${id}/reviews/${reviewId}`, {
+            res3 = await fetch(`https://gym-54v4.onrender.com/detials/${id}/reviews/${reviewId}`, {
 
                 method: 'DELETE',
                 headers: {

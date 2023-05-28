@@ -10,7 +10,7 @@ const LogOut = () => {
     const [load, setload] = useState(true)
 
     useEffect(() => {
-        fetch('/logout', {
+        fetch('/https://gym-54v4.onrender.comlogout', {
             method: "GET",
             headers: {
                 Accept: 'application/json',

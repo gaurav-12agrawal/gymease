@@ -28,7 +28,7 @@ const Login = () => {
         }
         setload(true)
         try {
-            res = await fetch('/signin', {
+            res = await fetch('https://gym-54v4.onrender.com/signin', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

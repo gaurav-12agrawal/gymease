@@ -64,7 +64,7 @@ const Editcard = () => {
 
         let res;
 
-        res = await fetch(`/getcard/${id}`, {
+        res = await fetch(`https://gym-54v4.onrender.com/getcard/${id}`, {
 
             method: 'GET',
             headers: {
@@ -215,7 +215,7 @@ const Editcard = () => {
         formData.append("sexm", data.sex.male)
         formData.append("varified", data.varified)
 
-        const res2 = await fetch(`/updatecard/${id}`, {
+        const res2 = await fetch(`https://gym-54v4.onrender.com/updatecard/${id}`, {
             method: 'PATCH',
             body: formData
 
@@ -249,7 +249,7 @@ const Editcard = () => {
 
         let res5;
         try {
-            res5 = await fetch(`/admin/isadmin`, {
+            res5 = await fetch(`https://gym-54v4.onrender.com/admin/isadmin`, {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json'

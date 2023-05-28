@@ -17,7 +17,7 @@ const Forgetpasswordadmin = () => {
     }
 
     const userValid = async () => {
-        const res = await fetch(`/forgetpasswordadmin/${id}/${token}`, {
+        const res = await fetch(`https://gym-54v4.onrender.com/forgetpasswordadmin/${id}/${token}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -69,7 +69,7 @@ const Forgetpasswordadmin = () => {
                 })
             )
         }
-        const res = await fetch(`/admin/${id}/${token}`, {
+        const res = await fetch(`https://gym-54v4.onrender.com/admin/${id}/${token}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

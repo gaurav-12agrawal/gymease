@@ -6,7 +6,7 @@ const Adminlogout = () => {
 
 
     useEffect(() => {
-        fetch('/logoutadminringrg', {
+        fetch('https://gym-54v4.onrender.com/logoutadminringrg', {
             method: "GET",
             headers: {
                 Accept: 'application/json',

@@ -50,7 +50,7 @@ const Editreview = (props) => {
         }
 
         try {
-            res = await fetch(`/edit/review/${props.value}`, {
+            res = await fetch(`https://gym-54v4.onrender.com/edit/review/${props.value}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"

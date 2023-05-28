@@ -28,7 +28,7 @@ const Forgetemail = () => {
                 theme: "dark",
             }))
         }
-        const res = await fetch("/sendpasswordlink", {
+        const res = await fetch("https://gym-54v4.onrender.com/sendpasswordlink", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

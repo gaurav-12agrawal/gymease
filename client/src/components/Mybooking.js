@@ -22,7 +22,7 @@ function Mybooking() {
     const checkdata = async () => {
         let res;
         try {
-            res = await fetch(`/user/islogin/getdata/mybooking`, {
+            res = await fetch(`https://gym-54v4.onrender.com/user/islogin/getdata/mybooking`, {
                 method: "GET",
                 headers: {
                     Accept: 'application/json',
