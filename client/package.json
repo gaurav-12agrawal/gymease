@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://gym-54v4.onrender.com",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@react-icons/all-files": "^4.1.0",
