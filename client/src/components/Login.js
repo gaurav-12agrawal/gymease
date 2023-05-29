@@ -35,6 +35,8 @@ const Login = () => {
                     'Access-Control-Allow-Origin':
                         'https://gymease.netlify.app/',
                 },
+                mode: "cors",
+                withCredentials: true,
                 body: JSON.stringify({
                     email, password
                 })
