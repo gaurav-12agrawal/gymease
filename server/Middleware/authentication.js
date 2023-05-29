@@ -11,7 +11,21 @@ const authenticate = async (req, res, next) => {
         if (token === 'empty') return res.sendStatus(400);
         const checkname = (req.params.token).slice(0, 7);
         token = token.substring(8)
-        token = atob(token)
+        function decodeString(encodedString) {
+            const encodedChars = encodedString.split('-');
+            let decodedString = '';
+
+            for (let i = 0; i < encodedChars.length; i++) {
+                const encodedChar = encodedChars[i];
+                const charCode = parseInt(encodedChar, 16);
+                const decodedChar = String.fromCharCode(charCode);
+                decodedString += decodedChar;
+            }
+
+            return decodedString;
+        }
+        const decodedString = decodeString(token);
+        token = decodedString
         if (checkname !== 'jwtoken') return res.sendStatus(400);
 
         const verifyToken = jwt.verify(token, process.env.MY_SECRET);

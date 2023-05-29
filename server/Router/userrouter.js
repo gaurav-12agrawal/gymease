@@ -116,10 +116,23 @@ userrouter.post('/signin', async (req, res) => {
                 //     sameSite: "none",
                 //     secure: true
                 // })
-                const string = token;
-                const encodedString = btoa(string);
-                // const decodedString = atob(encodedString);
-                token = encodedString;
+                function encodeString(string) {
+                    let encodedString = '';
+
+                    for (let i = 0; i < string.length; i++) {
+                        const charCode = string.charCodeAt(i);
+                        const encodedChar = charCode.toString(16);
+                        encodedString += encodedChar + '-';
+                    }
+
+                    // Remove the trailing dash
+                    encodedString = encodedString.slice(0, -1);
+
+                    return encodedString;
+                }
+                const encodedString = encodeString(token);
+                token = encodedString
+
 
                 return res.status(200).json({ message: "Login successfully", token: token })
 
