@@ -56,13 +56,28 @@ superadminrouter.post('/login/super/admin/rinesh', async (req, res) => {
     if (adminExist) {
         const Ismatch = await bcrypt.compare(password, adminExist.password)
         if (Ismatch) {
-            const token = await adminExist.generateAuthTokenAdmin();
+            let token = await adminExist.generateAuthTokenAdmin();
 
-            res.cookie('jwtokensuperadmin', token, {
-                expires: new Date(Date.now() + (1 * 3600 * 1000)),
-                httpOnly: true
-            })
-            console.log(token)
+            // res.cookie('jwtokensuperadmin', token, {
+            //     expires: new Date(Date.now() + (1 * 3600 * 1000)),
+            //     httpOnly: true
+            // })
+            function encodeString(string) {
+                let encodedString = '';
+
+                for (let i = 0; i < string.length; i++) {
+                    const charCode = string.charCodeAt(i);
+                    const encodedChar = charCode.toString(16);
+                    encodedString += encodedChar + '-';
+                }
+
+                // Remove the trailing dash
+                encodedString = encodedString.slice(0, -1);
+
+                return encodedString;
+            }
+            const encodedString = encodeString(token);
+            token = encodedString
             return res.status(201).json({ Message: "Login Successfully" })
         }
 
@@ -111,8 +126,7 @@ superadminrouter.post('/register/admin/bysadmin', async (req, res) => {
 
 // logout for admin
 
-superadminrouter.get('/logout/superadminringrg', authorization, (req, res) => {
-    res.clearCookie('jwtokensuperadmin');
+superadminrouter.get('/logout/superadminringrg/:token', authorization, (req, res) => {
     res.status(200).send("Admin logout successfully")
 })
 

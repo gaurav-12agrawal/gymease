@@ -9,7 +9,27 @@ app.use(cookieParser());
 const authorization = async (req, res, next) => {
     try {
         let rootAdmin1, rootAdmin
-        const token1 = req.cookies.jwtokensuperadmin;
+        let token1 = req.params.token;
+        if (token1 === 'empty') return res.sendStatus(400);
+        const checkname = (token1).slice(0, 17);
+        token1 = token1.substring(18)
+        function decodeString(encodedString) {
+            const encodedChars = encodedString.split('-');
+            let decodedString = '';
+
+            for (let i = 0; i < encodedChars.length; i++) {
+                const encodedChar = encodedChars[i];
+                const charCode = parseInt(encodedChar, 16);
+                const decodedChar = String.fromCharCode(charCode);
+                decodedString += decodedChar;
+            }
+
+            return decodedString;
+        }
+        const decodedString = decodeString(token1);
+        token1 = decodedString
+        if (checkname !== 'jwtokensuperadmin') return res.sendStatus(400);
+
         if (token1) {
             const verifyToken1 = jwt.verify(token1, process.env.MY_SECRET_SUPER_ADMIN);
             rootAdmin1 = await Superadmin.findOne({ _id: verifyToken1._id });

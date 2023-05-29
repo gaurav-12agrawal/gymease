@@ -2,6 +2,8 @@ import React, { useEffect, useReducer, useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom';
 import signupcss from './styles/signup.module.css'
 import { ToastContainer, toast } from 'react-toastify';
+import Cookies from 'js-cookie';
+
 import 'react-toastify/dist/ReactToastify.css';
 const Superadminlogin = () => {
     const navigate = useNavigate();
@@ -70,10 +72,13 @@ const Superadminlogin = () => {
                 progress: undefined,
                 theme: "dark",
             })
+            Cookies.set('jwtokensuperadmin', data.token, { expires: 1 });
+
             localStorage.setItem("isadmin", "admin")
             var now = new Date().getTime();
             localStorage.setItem('setupTime', now)
             navigate('/')
+
         }
     }
 
