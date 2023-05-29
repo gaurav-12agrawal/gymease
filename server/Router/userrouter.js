@@ -116,6 +116,7 @@ userrouter.post('/signin', async (req, res) => {
                 //     sameSite: "none",
                 //     secure: true
                 // })
+                const string = token;
                 const encodedString = btoa(string);
                 // const decodedString = atob(encodedString);
                 token = encodedString;
