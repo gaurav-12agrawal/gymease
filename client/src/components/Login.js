@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Fetchloader from './Fetchloader';
+import Cookies from 'js-cookie';
+
 const Login = () => {
     const navigate = useNavigate();
     const [load, setload] = useState(false)
@@ -58,6 +60,7 @@ const Login = () => {
                 progress: undefined,
                 theme: "dark",
             })
+            Cookies.set('jwtoken', data.token, { expires: 30 });
             navigate('/')
 
         }

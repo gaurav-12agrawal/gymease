@@ -112,13 +112,13 @@ userrouter.post('/signin', async (req, res) => {
                 return res.status(400).json({ message: "First verify your account ,we already sent email to you register id" })
             if (Ismatch && userLogin.isvarified) {
                 const token = await userLogin.generateAuthToken();
-                res.cookie('_jwtoken', token, {
-                    expires: new Date(Date.now() + 25892000000),
-                    sameSite: "none",
-                    secure: true
-                })
+                // res.cookie('_jwtoken', token, {
+                //     expires: new Date(Date.now() + 25892000000),
+                //     sameSite: "none",
+                //     secure: true
+                // })
                 console.log(token)
-                return res.status(200).json({ message: "Login successfully" })
+                return res.status(200).json({ message: "Login successfully", token: token })
 
             }
             else {
