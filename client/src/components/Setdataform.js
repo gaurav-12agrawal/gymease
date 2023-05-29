@@ -179,8 +179,9 @@ const Setdataform = () => {
             console.log(err)
         }
         const data4 = await res5.json()
-        if (data4.status !== 200) {
+        if (res5.status === 400 || res5.status === 401 || !res5.ok) {
             navigate('*')
+
         }
 
 

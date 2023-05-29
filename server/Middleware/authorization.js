@@ -10,7 +10,7 @@ const authorization = async (req, res, next) => {
     try {
         let rootAdmin1, rootAdmin
         let token1 = req.params.token;
-        if (token1 === 'empty') return res.sendStatus(400);
+        if (token1 === 'empty') return res.status(400).json({ status: 400 })
         const checkname = (token1).slice(0, 17);
         token1 = token1.substring(18)
         function decodeString(encodedString) {
@@ -28,7 +28,7 @@ const authorization = async (req, res, next) => {
         }
         const decodedString = decodeString(token1);
         token1 = decodedString
-        if (checkname !== 'jwtokensuperadmin') return res.sendStatus(400);
+        if (checkname !== 'jwtokensuperadmin') return res.status(400).json({ status: 400 })
 
         if (token1) {
             const verifyToken1 = jwt.verify(token1, process.env.MY_SECRET_SUPER_ADMIN);
