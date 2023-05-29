@@ -11,6 +11,7 @@ const authenticate = async (req, res, next) => {
         if (token === 'empty') return res.sendStatus(400);
         const checkname = (req.params.token).slice(0, 7);
         token = token.substring(8)
+        token = atob(token)
         if (checkname !== 'jwtoken') return res.sendStatus(400);
 
         const verifyToken = jwt.verify(token, process.env.MY_SECRET);
