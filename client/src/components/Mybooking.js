@@ -28,7 +28,9 @@ function Mybooking() {
                     Accept: 'application/json',
                     'Content-Type': 'application/json'
                 },
-                credentials: 'include'
+                mode: 'cors',
+                credentials: 'include',
+                withCredentials: true
             })
         }
         catch (err) {

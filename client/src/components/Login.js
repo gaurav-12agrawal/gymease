@@ -31,12 +31,8 @@ const Login = () => {
             res = await fetch('https://gym-54v4.onrender.com/signin', {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
-                    'Access-Control-Allow-Origin':
-                        'https://gymease.netlify.app/',
+                    Accept: 'application/json'
                 },
-                mode: "cors",
-                withCredentials: true,
                 body: JSON.stringify({
                     email, password
                 })

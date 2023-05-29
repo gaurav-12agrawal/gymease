@@ -113,8 +113,10 @@ userrouter.post('/signin', async (req, res) => {
             if (Ismatch && userLogin.isvarified) {
                 const token = await userLogin.generateAuthToken();
                 res.cookie('jwtoken', token, {
-                    expires: new Date(Date.now() + 25892000000),
-                    sameSite: "none"
+                    httpOnly: true,
+                    maxAge: 3600000 * 5,
+                    secure: true,
+                    sameSite: 'none'
                 })
                 return res.status(200).json({ message: "Login successfully" })
 
