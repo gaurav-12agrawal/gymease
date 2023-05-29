@@ -21,8 +21,11 @@ function Mybooking() {
     }
     const checkdata = async () => {
         let res;
+        let token = document.cookie;
+
         try {
-            res = await fetch(`https://gym-54v4.onrender.com/user/islogin/getdata/mybooking`, {
+            if (token === '') token = 'empty'
+            res = await fetch(`https://gym-54v4.onrender.com/user/islogin/getdata/mybooking${token}`, {
                 method: "GET",
                 headers: {
                     Accept: 'application/json',

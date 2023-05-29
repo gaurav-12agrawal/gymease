@@ -142,7 +142,7 @@ userrouter.get('/logout/:token', authenticate, (req, res) => {
     res.status(200).send("user logout successfully")
 })
 
-userrouter.get('/user/islogin/getdata/mybooking', authenticate, async (req, res) => {
+userrouter.get('/user/islogin/getdata/mybooking/:token', authenticate, async (req, res) => {
     const id = req.userID;
     console.log(id)
     try {

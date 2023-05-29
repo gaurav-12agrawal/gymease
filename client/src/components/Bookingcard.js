@@ -25,8 +25,10 @@ const Bookingcard = (props) => {
     const handleclick = async (e) => {
         const response = window.confirm("Are you sure you want to cencle your booked gym ?");
         if (response) {
+            let token = document.cookie;
+            if (token === '') token = 'empty'
             e.preventDefault();
-            const res = await fetch(`https://gym-54v4.onrender.com/item/cenclemyitem/${props.details._id}`, {
+            const res = await fetch(`https://gym-54v4.onrender.com/item/cenclemyitem/${props.details._id}/${token}`, {
                 method: 'PATCH',
                 body: ''
             });

@@ -182,7 +182,7 @@ paymentrouter.get('/item/verifyemail/:token/:email', async (req, res) => {
 })
 
 
-paymentrouter.patch('/item/cenclemyitem/:id', authenticate, async (req, res) => {
+paymentrouter.patch('/item/cenclemyitem/:id/:token', authenticate, async (req, res) => {
     const id = req.params.id
     console.log(id)
 
