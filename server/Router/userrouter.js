@@ -110,7 +110,7 @@ userrouter.post('/signin', async (req, res) => {
             if (Ismatch && !userLogin.isvarified)
                 return res.status(400).json({ message: "First verify your account ,we already sent email to you register id" })
             if (Ismatch && userLogin.isvarified) {
-                const token = await userLogin.generateAuthToken();
+                let token = await userLogin.generateAuthToken();
                 // res.cookie('_jwtoken', token, {
                 //     expires: new Date(Date.now() + 25892000000),
                 //     sameSite: "none",
