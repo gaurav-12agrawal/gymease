@@ -25,7 +25,7 @@ function Mybooking() {
 
         try {
             if (token === '') token = 'empty'
-            res = await fetch(`https://gym-54v4.onrender.com/user/islogin/getdata/mybooking${token}`, {
+            res = await fetch(`https://gym-54v4.onrender.com/user/islogin/getdata/mybooking/${token}`, {
                 method: "GET",
                 headers: {
                     Accept: 'application/json',
