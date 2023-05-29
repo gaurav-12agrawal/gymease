@@ -16,7 +16,12 @@ const paymentrouter = require('./Router/paymentrouter')
 app.use(express.json());
 app.use(cors({
     origin: "https://gymease.netlify.app",
-    credentials: true
+    credentials: true,
+    allowedHeaders: [
+        'Access-control-allow-origin',
+        'Content-type',
+        'Authorization'
+    ]
 }))
 app.set("trust proxy", 1);
 app.use(router)
