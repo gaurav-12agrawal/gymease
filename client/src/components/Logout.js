@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
+import Cookies from 'js-cookie';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,7 +11,9 @@ const LogOut = () => {
     const [load, setload] = useState(true)
 
     useEffect(() => {
-        fetch('/https://gym-54v4.onrender.comlogout', {
+        const token = document.cookie;
+
+        fetch(`/https://gym-54v4.onrender.com/logout/${token}`, {
             method: "GET",
             headers: {
                 Accept: 'application/json',
@@ -22,6 +25,8 @@ const LogOut = () => {
                 if (res.status === 200) {
                     setload(false)
                     navigate('/login')
+                    Cookies.remove('jwtoken');
+
                     return toast.success("Logout Successfully", {
                         position: "top-center",
                         autoClose: 1500,

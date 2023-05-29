@@ -7,11 +7,15 @@ app.use(cookieParser());
 
 const authenticate = async (req, res, next) => {
     try {
-        const token = req.cookies.jwtoken;
+        let token = req.params.token;
+        if (token === 'empty') return res.sendStatus(400);
+        const checkname = (req.params.token).slice(0, 7);
+        token = token.substring(8)
+        if (checkname !== 'jwtoken') return res.sendStatus(400);
+
         const verifyToken = jwt.verify(token, process.env.MY_SECRET);
-        console.log('hello')
-        console.log(token, verifyToken._id)
         const rootUser = await User.findOne({ _id: verifyToken._id });
+
         if (!rootUser) {
 
             res.sendStatus(400);

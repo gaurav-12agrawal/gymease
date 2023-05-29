@@ -98,7 +98,6 @@ userrouter.get('/user/verifyemail', async (req, res) => {
 
 /*****************************************LOGIN ROUTE**************/
 userrouter.post('/signin', async (req, res) => {
-    res.clearCookie('jwtoken');
     const { email, password } = req.body
     try {
 
@@ -139,8 +138,7 @@ userrouter.get('/user/islogin', authenticate, (req, res) => {
 
 
 })
-userrouter.get('/logout', authenticate, (req, res) => {
-    res.clearCookie('jwtoken', { path: '/' });
+userrouter.get('/logout/:token', authenticate, (req, res) => {
     res.status(200).send("user logout successfully")
 })
 
