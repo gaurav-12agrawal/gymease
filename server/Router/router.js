@@ -124,7 +124,7 @@ router.get("/iseditable/:id", authorization, async (req, res) => {
 })
 
 //payment Route
-router.get("/getsinglegym/:id/payment", authenticateboth, async (req, res) => {
+router.get("/getsinglegym/:id/payment/:token", authenticate, async (req, res) => {
     res.sendStatus(201).json();
 
 })

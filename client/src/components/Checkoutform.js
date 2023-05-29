@@ -27,7 +27,9 @@ const Checkoutform = () => {
     const checkdata = async () => {
         let res;
         try {
-            res = await fetch(`https://gym-54v4.onrender.com/getsinglegym/${id}/payment`, {
+            let token = document.cookie;
+            if (token === '') token = 'empty'
+            res = await fetch(`https://gym-54v4.onrender.com/getsinglegym/${id}/payment/${token}`, {
                 method: "GET",
                 headers: {
                     Accept: 'application/json',
@@ -126,7 +128,9 @@ const Checkoutform = () => {
         let res;
         setdata({ ...data, email: "", yname: "", date: "", month: "", year: "", number: "" })
         try {
-            res = await fetch(`https://gym-54v4.onrender.com/gym/${id}/paymentform`, {
+            let token = document.cookie;
+            if (token === '') token = 'empty'
+            res = await fetch(`https://gym-54v4.onrender.com/gym/${id}/paymentform/${token}`, {
                 method: 'POST',
                 body: formData
             })

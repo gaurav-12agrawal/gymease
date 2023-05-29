@@ -52,7 +52,7 @@ let transporter2 = nodemailer.createTransport({
 // store payment form to mongodb
 
 
-paymentrouter.post('/gym/:id/paymentform', authenticate, upload.array('image'), async (req, res) => {
+paymentrouter.post('/gym/:id/paymentform/:token', authenticate, upload.array('image'), async (req, res) => {
     if (!req.body.name || !req.body.address || !req.body.days || !req.body.price || !req.body.yname || !req.body.number.length === 10 || !req.body.email || req.files.length === 0 || !req.body.date || !req.body.month || !req.body.year) { return res.sendStatus(400) }
     const gym_id = req.params.id;
     const id = req.userID;
