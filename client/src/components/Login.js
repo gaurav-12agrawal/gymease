@@ -31,7 +31,7 @@ const Login = () => {
             res = await fetch('https://gym-54v4.onrender.com/signin', {
                 method: "POST",
                 headers: {
-                    Accept: 'application/json'
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
                     email, password
