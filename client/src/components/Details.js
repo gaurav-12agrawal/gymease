@@ -68,7 +68,9 @@ const Details = () => {
 
         let res5;
         try {
-            res5 = await fetch(`https://gym-54v4.onrender.com/user/islogin`, {
+            let token = document.cookie;
+            if (token === '') token = 'empty'
+            res5 = await fetch(`https://gym-54v4.onrender.com/user/islogin/${token}`, {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json'
@@ -195,7 +197,9 @@ const Details = () => {
 
             )
         }
-        const res3 = await fetch(`https://gym-54v4.onrender.com/detials/${getgymdata._id}/reviews`, {
+        let token = document.cookie;
+        if (token === '') token = 'empty'
+        const res3 = await fetch(`https://gym-54v4.onrender.com/detials/${getgymdata._id}/reviews/${token}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -265,7 +269,9 @@ const Details = () => {
         let res3
         console.log(id, reviewId)
         try {
-            res3 = await fetch(`https://gym-54v4.onrender.com/detials/${id}/reviews/${reviewId}`, {
+            let token = document.cookie;
+            if (token === '') token = 'empty'
+            res3 = await fetch(`https://gym-54v4.onrender.com/detials/${id}/reviews/${reviewId}/${token}`, {
 
                 method: 'DELETE',
                 headers: {

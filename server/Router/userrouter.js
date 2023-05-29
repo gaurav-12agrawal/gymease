@@ -133,7 +133,7 @@ userrouter.post('/signin', async (req, res) => {
     }
 })
 
-userrouter.get('/user/islogin', authenticate, (req, res) => {
+userrouter.get('/user/islogin/:token', authenticate, (req, res) => {
     res.status(200).json({ message: req.userID });
 
 

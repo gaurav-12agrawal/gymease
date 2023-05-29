@@ -50,7 +50,9 @@ const Editreview = (props) => {
         }
 
         try {
-            res = await fetch(`https://gym-54v4.onrender.com/edit/review/${props.value}`, {
+            let token = document.cookie;
+            if (token === '') token = 'empty'
+            res = await fetch(`https://gym-54v4.onrender.com/edit/review/${props.value}/${token}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"

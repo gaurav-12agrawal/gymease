@@ -4,7 +4,7 @@ const gyms = require('../models/gymschema')
 const Review = require('../models/reviewschema')
 const authenticate = require('../Middleware/authentication')
 const isReviewAuthor = require('../Middleware/isreviewauthor')
-reviewrouter.post("/detials/:id/reviews", authenticate, async (req, res) => {
+reviewrouter.post("/detials/:id/reviews/:token", authenticate, async (req, res) => {
     try {
         if (!req.body.review || !req.body.rating || req.body.review === '')
             return res.sendStatus(400)
@@ -23,7 +23,7 @@ reviewrouter.post("/detials/:id/reviews", authenticate, async (req, res) => {
     }
 
 })
-reviewrouter.delete("/detials/:id/reviews/:reviewId", authenticate, isReviewAuthor, async (req, res) => {
+reviewrouter.delete("/detials/:id/reviews/:reviewId/:token", authenticate, isReviewAuthor, async (req, res) => {
     try {
         const { id, reviewId } = req.params
         await gyms.findByIdAndUpdate(id, { $pull: { reviews: reviewId } })
@@ -36,7 +36,7 @@ reviewrouter.delete("/detials/:id/reviews/:reviewId", authenticate, isReviewAuth
     }
 
 })
-reviewrouter.patch("/edit/review/:id", async (req, res) => {
+reviewrouter.patch("/edit/review/:id/:token", async (req, res) => {
     try {
         const { id } = req.params
         const { review, rating } = req.body;
