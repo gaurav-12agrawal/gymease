@@ -24,7 +24,7 @@ app.use(cors({
         'Authorization'
     ]
 }))
-app.set("trust proxy", 1);
+app.set("trust proxy", 2);
 app.use(router)
 app.use(userrouter)
 app.use(userforrouter)
