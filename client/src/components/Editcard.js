@@ -214,8 +214,9 @@ const Editcard = () => {
         formData.append("sexf", data.sex.female)
         formData.append("sexm", data.sex.male)
         formData.append("varified", data.varified)
-
-        const res2 = await fetch(`https://gym-54v4.onrender.com/updatecard/${id}`, {
+        let token = document.cookie;
+        if (token === '') token = 'empty'
+        const res2 = await fetch(`https://gym-54v4.onrender.com/updatecard/${id}/${token}`, {
             method: 'PATCH',
             body: formData
 
@@ -249,7 +250,9 @@ const Editcard = () => {
 
         let res5;
         try {
-            res5 = await fetch(`https://gym-54v4.onrender.com/admin/isadmin`, {
+            let token = document.cookie;
+            if (token === '') token = 'empty'
+            res5 = await fetch(`https://gym-54v4.onrender.com/admin/isadmin/${token}`, {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json'

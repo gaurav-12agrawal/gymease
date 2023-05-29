@@ -13,7 +13,7 @@ const storage = require('../cloudinary/index')
 const upload = multer(storage)
 // gyms set router
 
-router.post('/setgyms', authorization, upload.array('image'), async (req, res) => {
+router.post('/setgyms/:token', authorization, upload.array('image'), async (req, res) => {
     const address = (req.body.address).toLowerCase();
     if (!(req.files.length) || !req.body.name || !req.body.city || !req.body.address || !req.body.url || !req.body.information || !req.body.workouts || !req.body.facilities || !req.body.ac || !req.body.varified || !req.body.timinge || !req.body.timings || !req.body.sexf || !req.body.sexm) {
         return res.sendStatus(400)
@@ -74,12 +74,12 @@ router.get('/getsinglegym/:id', async (req, res) => {
 
 })
 // delete card
-router.delete("/deletecard/:id", authorization, async (req, res) => {
+router.delete("/deletecard/:id/:token", authorization, async (req, res) => {
     try {
         const { id } = req.params;
 
         const deleteuser = await gyms.findByIdAndDelete({ _id: id });
-        res.status(201).json(deleteuser);
+        res.status(201).json({ status: 201, data: deleteuser })
     } catch (e) {
         res.status(422).json(e);
 
@@ -99,7 +99,7 @@ router.get("/getcard/:id", async (req, res) => {
     }
 })
 //updata card
-router.patch("/updatecard/:id", upload.array('image'), authorization, async (req, res) => {
+router.patch("/updatecard/:id/:token", upload.array('image'), authorization, async (req, res) => {
 
     if (!req.body.name || !req.body.city || !req.body.address || !req.body.url || !req.body.information || !req.body.workouts || !req.body.facilities || !req.body.ac || !req.body.varified || !req.body.timinge || !req.body.timings || !req.body.sexf || !req.body.sexm) {
         return res.sendStatus(400)
@@ -119,7 +119,7 @@ router.patch("/updatecard/:id", upload.array('image'), authorization, async (req
     res.sendStatus(200)
 })
 // check editable user
-router.get("/iseditable/:id", authorization, async (req, res) => {
+router.get("/iseditable/:id/:token", authorization, async (req, res) => {
     res.sendStatus(200)
 })
 

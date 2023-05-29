@@ -108,7 +108,9 @@ const Setdataform = () => {
         let res;
 
         try {
-            res = await fetch('https://gym-54v4.onrender.com/setgyms', {
+            let token = document.cookie;
+            if (token === '') token = 'empty'
+            res = await fetch(`https://gym-54v4.onrender.com/setgyms/${token}`, {
                 method: 'POST',
                 body: formData
             })
@@ -163,7 +165,9 @@ const Setdataform = () => {
 
         let res5;
         try {
-            res5 = await fetch(`https://gym-54v4.onrender.com/admin/isadmin`, {
+            let token = document.cookie;
+            if (token === '') token = 'empty'
+            res5 = await fetch(`https://gym-54v4.onrender.com/admin/isadmin/${token}`, {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json'

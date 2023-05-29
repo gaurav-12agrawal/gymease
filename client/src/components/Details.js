@@ -101,7 +101,9 @@ const Details = () => {
 
         let res2
         try {
-            res2 = await fetch(`https://gym-54v4.onrender.com/deletecard/${id}`, {
+            let token = document.cookie;
+            if (token === '') token = 'empty'
+            res2 = await fetch(`https://gym-54v4.onrender.com/deletecard/${id}/${token}`, {
 
                 method: 'DELETE',
                 headers: {
@@ -157,7 +159,9 @@ const Details = () => {
 
 
     const Editcard = async (id) => {
-        const res3 = await fetch(`https://gym-54v4.onrender.com/iseditable/${id}`, {
+        let token = document.cookie;
+        if (token === '') token = 'empty'
+        const res3 = await fetch(`https://gym-54v4.onrender.com/iseditable/${id}/${token}`, {
 
             method: 'GET',
             headers: {

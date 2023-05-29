@@ -41,7 +41,7 @@ adminrouter.post('/signinadminringrg', async (req, res) => {
 })
 
 // check admin
-adminrouter.get('/admin/isadmin', authorization, (req, res) => {
+adminrouter.get('/admin/isadmin/:token', authorization, (req, res) => {
     res.status(200).send("This is admin")
 
 })
