@@ -114,8 +114,10 @@ userrouter.post('/signin', async (req, res) => {
                 const token = await userLogin.generateAuthToken();
                 res.cookie('jwtoken', token, {
                     expires: new Date(Date.now() + 25892000000),
-                    sameSite: "none"
+                    sameSite: "none",
+                    secure: true
                 })
+                console.log(token)
                 return res.status(200).json({ message: "Login successfully" })
 
             }
