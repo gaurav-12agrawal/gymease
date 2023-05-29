@@ -78,7 +78,7 @@ superadminrouter.post('/login/super/admin/rinesh', async (req, res) => {
             }
             const encodedString = encodeString(token);
             token = encodedString
-            return res.status(201).json({ Message: "Login Successfully" })
+            return res.status(201).json({ Message: "Login Successfully", token: token })
         }
 
         else { return res.status(404).json({ Message: "superAdmin Not Found" }) }
