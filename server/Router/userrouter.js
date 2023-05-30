@@ -48,7 +48,7 @@ userrouter.post('/register', validateuser, async (req, res) => {
             var mailoptions = {
                 from: `verify your Email :<${process.env.MAIL_USERNAME_VERIFY}>`,
                 to: user.email,
-                subject: 'GymEase - Verify Your Email',
+                subject: 'Gymozy - Verify Your Email',
                 html: `<h1>${user.name} Thanks for Registration</h1>
                        <h5>Please verify your email to continue...</h5>
                        <a href="https://gym-54v4.onrender.com/user/verifyemail?token=${user.emailtoken} " >verify Here</a>

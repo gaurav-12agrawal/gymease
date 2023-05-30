@@ -42,7 +42,7 @@ userforrouter.post("/sendpasswordlink", async (req, res) => {
                 from: process.env.MAIL_USERNAME_VERIFY,
                 to: email,
                 subject: "Sending Email For password Reset",
-                text: `This Link Valid For 2 MINUTES https://gymease.netlify.app/forgetpassword/${userfind._id}/${setusertoken.verifytoken}`
+                text: `This Link Valid For 2 MINUTES https://gymozy.netlify.app/forgetpassword/${userfind._id}/${setusertoken.verifytoken}`
             }
 
             transporter.sendMail(mailOptions, (error, info) => {

@@ -172,7 +172,7 @@ paymentrouter.get('/item/verifyemail/:token/:email', async (req, res) => {
 
             return res.status(200).send('We have send payment details on your mail id');
         } else {
-            return res.status(401).json({ status: 401, message: "Your ticket expired ,if you have paid money than contact to GymEase in contact us section and see your item in mybooking section" })
+            return res.status(401).json({ status: 401, message: "Your ticket expired ,if you have paid money than contact to Gymozy in contact us section and see your item in mybooking section" })
         }
 
     }
