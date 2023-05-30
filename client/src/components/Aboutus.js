@@ -53,17 +53,17 @@ const Aboutus = () => {
             <div className={Contactcss.about3}>
                 <div className={Contactcss.content}>
                     <p className={Contactcss.content1}>
-                        Founded in 2023 in india. Gymease.com has grown in from of a small indian startup to become one of the world’s leading  online gym booking companies. Part of GARANGAL MAGNATE Gymease.com’s mission is to make it easier for everyone to experience the world of gymnasium.
+                        Founded in 2023 in india. gymozy.com has grown in from of a small indian startup to become one of the world’s leading  online gym booking companies. Part of GARANGAL MAGNATE gymozy.com’s mission is to make it easier for everyone to experience the world of gymnasium.
 
-                        By investing in the technology that helps take the friction out of workout, gymease.com seamlessly connects millions of gym trainers with memorable experiences, a range of workout options and incredible places to gym. As one of the world’s first marketplaces for both established brands and entrepreneurs of all sizes, gymease.com enables properties all over the world to reach a global audience and grow their businesses.
+                        By investing in the technology that helps take the friction out of workout, gymozy.com seamlessly connects millions of gym trainers with memorable experiences, a range of workout options and incredible places to gym. As one of the world’s first marketplaces for both established brands and entrepreneurs of all sizes, gymozy.com enables properties all over the world to reach a global audience and grow their businesses.
 
-                        Gymease.com offers many listings alone of gyms, yoga centres and other health and wellness places.No matter where you want to go or what you want to do, gymease.com makes it easy and backs it all up with 24/7 customer support.</p>
+                        gymozy.com offers many listings alone of gyms, yoga centres and other health and wellness places.No matter where you want to go or what you want to do, gymozy.com makes it easy and backs it all up with 24/7 customer support.</p>
                     <br></br>
-                    <p>gymease.com is a next generation ecommerce platform for Gym options. We provide the best experience for gym members by offering a wide assortment of certified gyms that are nearest to your location in a click of a button at the best price </p>
+                    <p>gymozy.com is a next generation ecommerce platform for Gym options. We provide the best experience for gym members by offering a wide assortment of certified gyms that are nearest to your location in a click of a button at the best price </p>
                     <br></br>
                     <br></br>
                     <h3>The first-class destination for first-class Gym!</h3>
-                    <p>gymease.com is your single stop for booking Gym, all over India. We've brought together cutting-edge technology with country-wide partners and more importantly, deep understanding of what trainee and trainers need. We solve all pain points associated with exercise and health care you get a quick, easy, fair, transparent, hassle (and haggle) free process.</p>
+                    <p>gymozy.com is your single stop for booking Gym, all over India. We've brought together cutting-edge technology with country-wide partners and more importantly, deep understanding of what trainee and trainers need. We solve all pain points associated with exercise and health care you get a quick, easy, fair, transparent, hassle (and haggle) free process.</p>
                     <br></br>
                     <br></br>
                     <h3>- Want to know about Gym with us ? -</h3>
@@ -107,9 +107,9 @@ const Aboutus = () => {
                     <br>
                     </br>
                     <h4>How to solve this challenge ?</h4>
-                    <p>Invest in gymease.com that reduces the manual labor and provides an easier way to track your finances and manage your members and employees. Gym management software provides member and employee management, automated reporting, inventory management, online account access for current members and online gym sign up for prospects. Through these software features your staff will have more free time to engage with members to provide a better member experience.</p>
+                    <p>Invest in gymozy.com that reduces the manual labor and provides an easier way to track your finances and manage your members and employees. Gym management software provides member and employee management, automated reporting, inventory management, online account access for current members and online gym sign up for prospects. Through these software features your staff will have more free time to engage with members to provide a better member experience.</p>
                     <br></br>
-                    <h3>Interested in learning more about gym management software? Gymease.com is the nation’s leading software website processing provider for the health and fitness industry.</h3>
+                    <h3>Interested in learning more about gym management software? gymozy.com is the nation’s leading software website processing provider for the health and fitness industry.</h3>
                 </div>
             </div>
         </>

@@ -47,7 +47,7 @@ const Gymcard = (props) => {
                         <p className={Gymcardcss.rightname} >{props.details.name}</p>
                         <div className={Gymcardcss.forflex}>
                             {(props.details.varified) && (<img className={Gymcardcss.iconimage} src="https://res.cloudinary.com/dgfn40mfc/image/upload/v1685130143/Important%20image/verified_bak4pj.png"></img>)}
-                            {(props.details.varified) && (<span > verified by GymEase</span>)}
+                            {(props.details.varified) && (<span > verified by Gymozy</span>)}
                         </div>
                     </div>
 

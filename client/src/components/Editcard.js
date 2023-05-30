@@ -337,7 +337,7 @@ const Editcard = () => {
                         />
                     </div>
                     <div >
-                        <label className={formcss.label} htmlFor="varified">Varified by Gymease</label><br />
+                        <label className={formcss.label} htmlFor="varified">Varified by Gymozy</label><br />
                         <input type="checkbox" id="varified" name="varified" value={data.varified}
                             onClick={handleInputs} defaultChecked
                         />

@@ -12,8 +12,8 @@ function Footer() {
     return (
         <>
             <div className="Footer_container">
-                <div className="footername">GymEase</div>
-                <div className="footercopy">© GymEase, All rights reserved.
+                <div className="footername">Gymozy</div>
+                <div className="footercopy">© Gymozy, All rights reserved.
                 </div>
                 <div>
                     <div className='aboutleft3'>

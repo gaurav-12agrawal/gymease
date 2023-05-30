@@ -7,7 +7,7 @@ function Privacy() {
         <>
             <div className={Pcss.container}>
                 <img className={Pcss.div1} src={image}></img>
-                <h1 className={Pcss.div2}>GymEase's privacy policy</h1>
+                <h1 className={Pcss.div2}>Gymozy's privacy policy</h1>
                 <div className={Pcss.div3}>
                     <p><b>Privacy Policy</b>
                     </p>
@@ -15,7 +15,7 @@ function Privacy() {
 
                     </p>
                     <p>
-                        Thank you for using GymEase, the online gym booking platform ("Website"). At GymEase, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard the information you provide when using our Website. By accessing or using our Website, you agree to the terms of this Privacy Policy.
+                        Thank you for using Gymozy, the online gym booking platform ("Website"). At Gymozy, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard the information you provide when using our Website. By accessing or using our Website, you agree to the terms of this Privacy Policy.
                     </p>
                 </div>
                 <div className={Pcss.div4}>
@@ -25,7 +25,7 @@ function Privacy() {
 
                     </p>
                     <br></br>
-                    <p className={Pcss.answer}>Personal Information:<br></br> When you sign up for a GymEase account, we collect certain personal information such as your name, email address, phone number, and billing details.
+                    <p className={Pcss.answer}>Personal Information:<br></br> When you sign up for a Gymozy account, we collect certain personal information such as your name, email address, phone number, and billing details.
                     </p>
                     <br></br>
                     <p className={Pcss.answer}>Usage Information:<br></br>We may collect information about how you interact with our Website, including your browsing activities and IP address.
@@ -96,7 +96,7 @@ function Privacy() {
                     </h4>
                     <br></br>
                     <p>
-                        By using <b>GymEase</b>, you acknowledge that you have read, understood, and agree to the terms of this <b>Privacy Policy</b>.
+                        By using <b>Gymozy</b>, you acknowledge that you have read, understood, and agree to the terms of this <b>Privacy Policy</b>.
                     </p>
                 </div>
             </div>

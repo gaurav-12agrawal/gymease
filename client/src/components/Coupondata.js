@@ -45,7 +45,7 @@ const Coupondata = [{
     isper: false
 }, {
     id: 8,
-    name: 'GYMEASE200',
+    name: 'GYMOZY200',
     off: 200,
     mb: 1000,
     isper: false

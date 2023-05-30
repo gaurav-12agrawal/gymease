@@ -63,7 +63,7 @@ function Navbar() {
                         }
                     </div>
                     <li className='Navbar_li'> <img src='https://res.cloudinary.com/dgfn40mfc/image/upload/v1685128198/Important%20image/logo_zzpwsu.jpg' alt="logo" className='logo_navbar' /></li>
-                    <li className='Navbar_li Name_comp' >  <Link to="/" className="nav-link ">GymEase</Link></li>
+                    <li className='Navbar_li Name_comp' >  <Link to="/" className="nav-link ">Gymozy</Link></li>
                     <div className='Navbar_search'>
                         <input onKeyUp={handleKeyDown} type="search" id="" name="" ref={inputElement} className='navbar_search_inp' placeholder='Find Your Gym...' onChange={handleChange}></input>
                         <button className='navbar_search_button' onClick={handleClick} >Search</button>
