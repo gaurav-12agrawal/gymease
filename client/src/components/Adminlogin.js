@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import signupcss from './styles/signup.module.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Cookies from 'js-cookie';
+
 const Adminlogin = () => {
     const navigate = useNavigate();
-
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [password, setPassword] = useState('')
@@ -45,7 +46,7 @@ const Adminlogin = () => {
 
         const data = await res.json()
 
-        if (data.status === 422 || data.status === 400 || data.status === 201 || !data || !res.ok) {
+        if (data.status === 422 || data.status === 400 || !data || !res.ok) {
             toast.error("You are not a Admin", {
                 position: "top-center",
                 autoClose: 3000,
@@ -71,6 +72,8 @@ const Adminlogin = () => {
                 progress: undefined,
                 theme: "dark",
             })
+            Cookies.set('jwtokenadmin', data.token, { expires: 1 });
+
             localStorage.setItem("isadmin", "admin")
             var now = new Date().getTime();
             localStorage.setItem('setupTime', now)

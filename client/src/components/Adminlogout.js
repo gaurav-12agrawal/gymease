@@ -1,12 +1,16 @@
 
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Cookies from 'js-cookie';
+
 const Adminlogout = () => {
     const navigate = useNavigate();
 
 
     useEffect(() => {
-        fetch('https://gym-54v4.onrender.com/logoutadminringrg', {
+        let token = document.cookie;
+        if (token === '') token = 'empty'
+        fetch(`https://gym-54v4.onrender.com/logoutadminringrg/${token}`, {
             method: "GET",
             headers: {
                 Accept: 'application/json',
@@ -15,10 +19,11 @@ const Adminlogout = () => {
             credentials: 'include'
         })
             .then((res) => {
-                console.log(res)
+
                 localStorage.removeItem('isadmin')
                 localStorage.removeItem('setupTime')
                 navigate('/adminlogin')
+                Cookies.remove('jwtokenadmin');
 
             })
             .catch((err) => {

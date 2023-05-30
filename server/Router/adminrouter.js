@@ -8,9 +8,9 @@ const cookieParser = require("cookie-parser");
 const authorization = require('../Middleware/authorization');
 adminrouter.use(cookieParser());
 
+
 // User login Route
 adminrouter.post('/signinadminringrg', async (req, res) => {
-    res.clearCookie('jwtokenadmin');
     const { email, password, name } = req.body
     try {
 
@@ -21,14 +21,31 @@ adminrouter.post('/signinadminringrg', async (req, res) => {
             const Ismatch = await bcrypt.compare(password, adminLogin.password)
 
             if (Ismatch) {
-                const token = await adminLogin.generateAuthTokenAdmin();
+                let token = await adminLogin.generateAuthTokenAdmin();
 
-                res.cookie('jwtokenadmin', token, {
-                    expires: new Date(Date.now() + (1 * 3600 * 1000)),
-                    httpOnly: true
-                })
-                console.log(token)
-                return res.json({ message: "sign in successfully" });
+                // res.cookie('jwtokenadmin', token, {
+                //     expires: new Date(Date.now() + (1 * 3600 * 1000)),
+                //     httpOnly: true
+                // })
+                // console.log(token)
+                function encodeString(string) {
+                    let encodedString = '';
+
+                    for (let i = 0; i < string.length; i++) {
+                        const charCode = string.charCodeAt(i);
+                        const encodedChar = charCode.toString(16);
+                        encodedString += encodedChar + '-';
+                    }
+
+                    // Remove the trailing dash
+                    encodedString = encodedString.slice(0, -1);
+
+                    return encodedString;
+                }
+                const encodedString = encodeString(token);
+                token = encodedString
+
+                return res.json({ message: "sign in successfully", token: token });
 
             }
             else return res.status(404).json({ error: "Invalid Credientails" })
@@ -42,6 +59,7 @@ adminrouter.post('/signinadminringrg', async (req, res) => {
 
 // check admin
 adminrouter.get('/admin/isadmin/:token', authorization, (req, res) => {
+
     res.status(200).send("This is admin")
 
 })
@@ -49,9 +67,8 @@ adminrouter.get('/admin/isadmin/:token', authorization, (req, res) => {
 
 // logout for admin
 
-adminrouter.get('/logoutadminringrg', authorization, (req, res) => {
-    res.clearCookie('jwtokenadmin', { path: '/' });
-    console.log('asdf')
+adminrouter.get('/logoutadminringrg/:token', authorization, (req, res) => {
+
     res.status(200).send("Admin logout successfully")
 
 })
