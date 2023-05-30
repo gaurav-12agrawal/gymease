@@ -119,7 +119,7 @@ const Payment = () => {
             console.log(err);
             navigate('/login')
         }
-
+        setload(false)
         if (!res.ok) {
             navigate('/login')
             toast.info("Login First", {
@@ -135,6 +135,7 @@ const Payment = () => {
         }
     }
     useEffect(() => {
+        setload(true)
         checkdata();
     }, [reducer])
 
