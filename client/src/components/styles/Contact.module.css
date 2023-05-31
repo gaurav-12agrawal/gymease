@@ -247,12 +247,16 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+
 }
 
 .aboutcarddata3 {
     margin: auto;
-    width: 100%;
+    width: 90%;
     word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cofounderimage {

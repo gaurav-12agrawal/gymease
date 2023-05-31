@@ -27,3 +27,25 @@
     text-decoration: underline;
     color: blue;
 }
+
+.div1 {
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 700px) {
+    .div1 {
+        width: 400px;
+        height: 400px;
+
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .div1 {
+        width: 300px;
+        height: 300px;
+
+    }
+
+}

@@ -23,14 +23,14 @@ const Aboutus = () => {
     return (
         <>
             <div className={Contactcss.about}>
-                <p className={Contactcss.about1} >Meet to our team</p>
+                <p className={Contactcss.about1} >Meet  our team</p>
                 <div className={Contactcss.about2}>
                     <div className={Contactcss.aboutcard} data-aos="flip-right" >
                         <img className={Contactcss.cofounderimage} src={rinesh} ></img>
                         <div className={Contactcss.aboutcarddata}>
-                            <p className={Contactcss.aboutcarddata2}>Founder & CEO</p>
                             <p className={Contactcss.aboutcarddata1}>Rinesh Garg</p>
-                            <p className={Contactcss.aboutcarddata3}>Always ready to learn and crete new things especially for betterment of life, on a mission to create strategies and solution for building a happire and productive workplace</p></div>
+                            <p className={Contactcss.aboutcarddata2}>Founder & CEO</p><br></br>
+                            <p className={Contactcss.aboutcarddata3}>Introducing RINESH GARG, the driving force behind Gymozy, simplifying your fitness journey by revolutionizing online gym bookings. With their vision, we bring convenience and accessibility to fitness enthusiasts worldwide.</p></div>
                         <div className={Contactcss.aboutleft3}>
 
                             <a className={Contactcss.iconlinks} target="_blank" href={rineshinsta}> <FaInstagram /></a>
@@ -42,9 +42,9 @@ const Aboutus = () => {
                     <div className={Contactcss.aboutcard} data-aos="flip-left" >
                         <img className={Contactcss.cofounderimage} src={mangal} ></img>
                         <div className={Contactcss.aboutcarddata}>
-                            <p className={Contactcss.aboutcarddata2}>Co-Founder & CFO</p>
                             <p className={Contactcss.aboutcarddata1}> Mahesh Mangal</p>
-                            <p className={Contactcss.aboutcarddata3}>MBA ,experience in managing front desk operations and providing administrative support. Accept changes with positivity and diversificatoin . Adaptive nature and motivated to learn ,growand excelin my professional carrer</p></div>
+                            <p className={Contactcss.aboutcarddata2}>Co-Founder & CFO</p><br></br>
+                            <p className={Contactcss.aboutcarddata3}>Meet MAHESH MANGAL, the visionary co-founder of Gymozy, shaping the future of online gym bookings with innovation and expertise. Together, we empower fitness enthusiasts by providing seamless access to gyms and inspiring active lifestyles.</p></div>
                         <div className={Contactcss.aboutleft3}>
                             <a className={Contactcss.iconlinks} target="_blank" href={maheshinsta}> <FaInstagram /></a>
                             <a className={Contactcss.iconlinks} target="_blank" href={maheshlinekedin}><FaLinkedin /></a>
