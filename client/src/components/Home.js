@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import Reactplayer from 'react-player'
 import { RxCross1 } from "react-icons/rx";
 import Detailscss from '../components/styles/Detailspage.module.css'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 function Home() {
     const [pop, setpop] = useState(false)
     const hidepop = () => {
@@ -22,7 +24,7 @@ function Home() {
 
     const navigate = useNavigate();
     useEffect(() => {
-
+        AOS.init({ duration: 1200 })
         setTimeout(() => {
             setpop(!pop)
         }, 5000);
@@ -32,7 +34,7 @@ function Home() {
 
         <>
             <div>
-                {pop ? <div className={`${Detailscss.popupwindow}`} >
+                {pop ? <div className={`${Detailscss.popupwindow}`} data-aos="fade-up" >
 
                     <div className={Detailscss.popupwindowinner}>
                         <div className={Detailscss.cross} onClick={hidepop} >< RxCross1 /></div>
@@ -56,7 +58,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="videocontainer">
-                    <div className="video1" >
+                    <div className="video1" data-aos="flip-left" >
                         <Reactplayer url="https://res.cloudinary.com/dgfn40mfc/video/upload/v1685128012/Important%20image/pexels-taryn-elliott-3327959-1920x1080-24fps_w1w0li.mp4" controls loop
                             width='100%'
                             height='100%'
@@ -70,7 +72,7 @@ function Home() {
                             }}
 
                         /></div>
-                    <div className="hidevideo video1"
+                    <div className="hidevideo video1" data-aos="flip-right"
 
                     >
                         <Reactplayer url="https://res.cloudinary.com/dgfn40mfc/video/upload/v1685128002/Important%20image/pexels-gustavo-fring-4110445-3840x2160-30fps_mdanpe.mp4" controls loop
@@ -98,7 +100,7 @@ function Home() {
 
                     {
                         Citydata.map((value) => (
-                            <div key={value.id} className="home_grid_card" onClick={handleClick}>
+                            <div key={value.id} className="home_grid_card" data-aos="fade-left" onClick={handleClick}>
                                 <Citycards details={value} />
                             </div>
                         )

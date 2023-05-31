@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Contactcss from '../components/styles/Contact.module.css'
 import { FaInstagram } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 const Aboutus = () => {
     const rineshinsta = 'https://instagram.com/rinesh_garg?igshid=OGQ5ZDc2ODk2ZA=='
     const rineshfacebook = 'https://m.facebook.com/rinesh.garg'
@@ -15,12 +17,15 @@ const Aboutus = () => {
     const maheshlinekedin = 'https://www.linkedin.com/in/mahesh-gupta-60144622a'
     const rinesh = 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1685046275/Important%20image/fotor_2023-5-26_1_54_0_fwzql4.png'
     const mangal = 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1685043954/Important%20image/fotor_2023-5-26_1_14_40_wsf8bq.png'
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
     return (
         <>
             <div className={Contactcss.about}>
                 <p className={Contactcss.about1} >Meet to our team</p>
                 <div className={Contactcss.about2}>
-                    <div className={Contactcss.aboutcard} >
+                    <div className={Contactcss.aboutcard} data-aos="flip-right" >
                         <img className={Contactcss.cofounderimage} src={rinesh} ></img>
                         <div className={Contactcss.aboutcarddata}>
                             <p className={Contactcss.aboutcarddata2}>Founder & CEO</p>
@@ -34,7 +39,7 @@ const Aboutus = () => {
                             <a className={Contactcss.iconlinks} target="_blank" href={rineshfacebook}><FaFacebook /></a>
                         </div>
                     </div>
-                    <div className={Contactcss.aboutcard} >
+                    <div className={Contactcss.aboutcard} data-aos="flip-left" >
                         <img className={Contactcss.cofounderimage} src={mangal} ></img>
                         <div className={Contactcss.aboutcarddata}>
                             <p className={Contactcss.aboutcarddata2}>Co-Founder & CFO</p>

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Contactcss from '../components/styles/Contact.module.css'
 import { FaInstagram } from 'react-icons/fa';
@@ -8,6 +8,8 @@ import { FaFacebook } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 function Contact() {
     const form = useRef();
     const navigate = useNavigate();
@@ -48,6 +50,9 @@ function Contact() {
     const insta = 'https://www.facebook.com/profile.php?id=100092718979254'
     const twitter = 'https://twitter.com/GymEase'
     const linkedin = 'https://www.facebook.com/profile.php?id=100092718979254'
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
     return (
         <>
             <div className={Contactcss.main}>
@@ -70,7 +75,7 @@ function Contact() {
                         </div>
                     </div>
                     <div className={Contactcss.contactright}>
-                        <div className={Contactcss.contactrightsmall}>
+                        <div className={Contactcss.contactrightsmall} data-aos="flip-right">
 
                             <form className={Contactcss.contactrightsmallform} ref={form} onSubmit={sendEmail} >
                                 <div className={Contactcss.name}>
