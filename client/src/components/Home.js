@@ -100,7 +100,7 @@ function Home() {
 
                     {
                         Citydata.map((value) => (
-                            <div key={value.id} className="home_grid_card" data-aos="fade-left" onClick={handleClick}>
+                            <div key={value.id} className="home_grid_card" data-aos="fade-up" onClick={handleClick}>
                                 <Citycards details={value} />
                             </div>
                         )
