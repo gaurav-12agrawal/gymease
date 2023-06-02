@@ -6,10 +6,14 @@ import Paymentcss from './styles/payment.module.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Fetchloader from './Fetchloader';
+import { RxCross1 } from "react-icons/rx";
+
 import Coupondata from './Coupondata';
 const Payment = () => {
     const [coupon, setcoupon] = useState('')
     const [count, setcount] = useState(1);
+    const [tempprice, settemprice] = useState()
+
     const [reducer, forceupdate] = useReducer(x => x + 1, 0)
     const [load, setload] = useState(false)
     const navigate = useNavigate();
@@ -18,6 +22,15 @@ const Payment = () => {
 
     const handleclick = () => {
         navigate(`/details/${id}/payment/checkoutform`, { state: { days: location.state.days, address: location.state.address, name: location.state.name, price: location.state.price } })
+    }
+    const removecoupon = () => {
+        setcount(1)
+        setload(true)
+        location.state.price = tempprice
+        const timer = setTimeout(() => {
+            setload(false)
+        }, 200);
+        forceupdate();
     }
     const checkcoupon = () => {
         if (coupon === '') {
@@ -51,15 +64,15 @@ const Payment = () => {
                     })
                 }
                 else {
-                    if (cfind.isper) location.state.price = location.state.price - (location.state.price * cfind.off)
+                    settemprice(location.state.price)
+                    if (cfind.isper) location.state.price = location.state.price - Math.round((location.state.price * cfind.off))
                     else location.state.price = location.state.price - cfind.off
-                    setcount(count => count + 1)
+                    setcount(2)
                     setload(true)
                     const timer = setTimeout(() => {
                         setload(false)
-                    }, 500);
+                    }, 200);
                     forceupdate();
-                    setcoupon('')
 
                     return toast.success("Coupon applied successfully", {
                         position: "top-center",
@@ -156,8 +169,13 @@ const Payment = () => {
                         <div className={Paymentcss.coupon}>
                             <label className={Paymentcss.coupon1} htmlFor='coupon'>Do you have any discount coupon ?</label>
                             <br></br>
-                            <input type='text' id='coupon' placeholder='Gymfree100' value={coupon} className={Paymentcss.coupon2} onChange={e => setcoupon(e.target.value)}></input>
-                            <button className={Paymentcss.coupon3} onClick={checkcoupon} >Apply</button>
+                            {count == 2 ?
+                                <input type='text' value={coupon} className={Paymentcss.remove2} ></input> :
+                                <input type='text' id='coupon' placeholder='Gymfree100' value={coupon} className={Paymentcss.coupon2} onChange={e => setcoupon(e.target.value)}></input>}
+                            {count == 2 ?
+                                <button className={Paymentcss.remove1} onClick={removecoupon}  >Remove</button>
+                                : <button className={Paymentcss.coupon3} onClick={checkcoupon} >Apply</button>
+                            }
                         </div>
                         <p className={Paymentcss.para}>
                             <button onClick={handleclick} className={Paymentcss.detailsbutton}>Proceed to payment</button>

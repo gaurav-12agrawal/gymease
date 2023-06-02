@@ -2,7 +2,7 @@
 
 .container {
     padding-top: 75px;
-
+    font-family: ubuntu;
 }
 
 .card {
@@ -94,6 +94,23 @@
     -webkit-text-fill-color: rgb(0, 0, 0) !important;
 }
 
+.remove1 {
+    border: none;
+    color: white;
+    padding: 5px;
+    background-color: rgb(241, 89, 30);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove2 {
+    background-color: transparent;
+    margin-top: 20px;
+    padding: 5px;
+    margin-right: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+}
 
 @media screen and (max-width: 640px) {
     .card {

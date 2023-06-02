@@ -362,7 +362,7 @@ const Details = () => {
 
             {pop ? <div className={`${Detailscss.popupwindow}`} >
 
-                <div className={Detailscss.popupwindowinner}>
+                <div className={`${Detailscss.popupwindowinner} ${Detailscss.popupwindowinner1}`}>
                     <div className={Detailscss.cross} onClick={hidepop} >< RxCross1 /></div>
                     <Editreview value={editreviewid}
                         onsubmit={reload}

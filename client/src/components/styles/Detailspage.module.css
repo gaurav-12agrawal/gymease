@@ -525,6 +525,11 @@ screen and (min-resolution: 192dpi) {
     align-items: center;
 }
 
+.popupwindowinner1 {
+    background-color: white;
+    margin: 0;
+}
+
 .crossimage {
     transition: all 400ms ease-in-out;
 

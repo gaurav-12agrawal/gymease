@@ -133,7 +133,7 @@ const Editreview = (props) => {
                             )
                         })}
                     </div>
-                    <textarea className={Detailscss.editcommentbox} id='body' name='body'
+                    <textarea className={Detailscss.editcommentbox} cols={80} id='body' name='body'
                         onChange={(e) => setreview(e.target.value)} value={review} ></textarea>
                     <button className={Detailscss.editpopreviewbutton} onClick={PostData} >Edit</button>
                 </form>
