@@ -33,7 +33,7 @@ const Forgetemailsuperadmin = () => {
             },
             body: JSON.stringify({ email, name })
         });
-        console.log('hello')
+
 
         const data = await res.json();
 

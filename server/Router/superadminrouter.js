@@ -219,7 +219,7 @@ superadminrouter.post("/admin/:id/:token", async (req, res) => {
         const verifyToken = jwt.verify(token, process.env.MY_SECRET_SUPER_ADMIN);
         validuser.verifytoken = null
         await validuser.save();
-        console.log(validuser.verifytoken)
+
         if (validuser && verifyToken._id) {
             const newpassword = await bcrypt.hash(password, 12);
             const setnewuserpass = await Superadmin.findByIdAndUpdate({ _id: id }, { password: newpassword });

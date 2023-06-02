@@ -39,7 +39,7 @@ const Allcitygyms = () => {
         }
         const data = await res.json()
         if (data.status === 400 || !data) {
-            console.log("data is not found")
+
         }
         else {
             window.scrollTo(0, 0)

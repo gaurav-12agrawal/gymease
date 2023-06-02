@@ -19,7 +19,6 @@ const Bookingcard = (props) => {
     const milliseconds2 = props.details.expiredate;
     const date2 = new Date(milliseconds2);
     const dateString2 = date2.toLocaleDateString();
-    console.log(milliseconds0, props.details.name)
     const [type, settype] = useState('Booked');
     const [load, setload] = useState(1)
     const handleclick = async (e) => {

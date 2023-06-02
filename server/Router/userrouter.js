@@ -161,7 +161,7 @@ userrouter.get('/logout/:token', authenticate, (req, res) => {
 
 userrouter.get('/user/islogin/getdata/mybooking/:token', authenticate, async (req, res) => {
     const id = req.userID;
-    console.log(id)
+
     try {
         const user = await User.findById({ _id: id }).populate('items')
 

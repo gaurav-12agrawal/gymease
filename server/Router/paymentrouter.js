@@ -145,7 +145,7 @@ paymentrouter.get('/item/verifyemail/:token/:email', async (req, res) => {
             ];
             const width = 250;
             const height = 300;
-            console.log(validitem.images[0].url)
+
             const mailOptions = {
                 from: process.env.MAIL_USERNAME_PAYMENT,
                 to: maillist,
@@ -184,7 +184,7 @@ paymentrouter.get('/item/verifyemail/:token/:email', async (req, res) => {
 
 paymentrouter.patch('/item/cenclemyitem/:id/:token', authenticate, async (req, res) => {
     const id = req.params.id
-    console.log(id)
+
 
     const item = await Item.findByIdAndUpdate(id, { cbyuser: 1 }, { new: true });
     const time = new Date().getTime();
@@ -193,7 +193,7 @@ paymentrouter.patch('/item/cenclemyitem/:id/:token', authenticate, async (req, r
         await item.save();
         // create mail
         const email1 = process.env.Email
-        console.log(email1)
+
         var maillist = [
             email1,
             item.email

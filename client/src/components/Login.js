@@ -46,7 +46,7 @@ const Login = () => {
         }
 
         const data = await res.json()
-        console.log(data.message)
+
         const message = data.message
         setload(false)
         if (res.status === 200) {

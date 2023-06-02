@@ -32,7 +32,7 @@ const Forgetpassword = () => {
         const data = await res.json()
 
         if (data.status == 201) {
-            console.log("user valid")
+
         } else {
             navigate("*")
         }

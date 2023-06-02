@@ -19,7 +19,7 @@ const Superadminlogout = () => {
             credentials: 'include'
         })
             .then((res) => {
-                console.log(res)
+
                 localStorage.removeItem('isadmin')
                 localStorage.removeItem('setupTime')
                 navigate('/superadminlogin')

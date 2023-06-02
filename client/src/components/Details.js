@@ -51,7 +51,7 @@ const Details = () => {
         }
         const data = await res.json()
         if (data.status === 400 || !data) {
-            console.log("data is not found")
+
         }
         else {
             setgymdata(data)
@@ -83,7 +83,7 @@ const Details = () => {
         }
         const data4 = await res5.json()
         if (data4.status === 400 || !data4) {
-            console.log('user is not login')
+
         }
         if (res5.status === 200) {
             setisloginuserid(data4.message)
@@ -271,7 +271,7 @@ const Details = () => {
 
     const Deletereview = async (id, reviewId) => {
         let res3
-        console.log(id, reviewId)
+
         try {
             let token = document.cookie;
             if (token === '') token = 'empty'

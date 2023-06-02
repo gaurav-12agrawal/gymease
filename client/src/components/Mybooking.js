@@ -87,7 +87,7 @@ function Mybooking() {
         setloading(true)
     }, [reducer])
     let reversedArray = [...detail1].reverse();
-    console.log(reversedArray)
+
     let i = 0;
 
 

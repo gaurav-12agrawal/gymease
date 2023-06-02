@@ -186,7 +186,7 @@ const Editcard = () => {
 
         e.preventDefault();
 
-        console.log(data)
+
         const formData = new FormData()
         for (var i = 0; i < file.length; i++) {
             formData.append('image', file[i])

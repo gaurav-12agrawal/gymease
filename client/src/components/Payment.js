@@ -73,7 +73,7 @@ const Payment = () => {
                     })
                 }
             } catch (error) {
-                console.log(coupon)
+
                 return toast.info("Invalid coupon", {
                     position: "top-center",
                     autoClose: 2000,

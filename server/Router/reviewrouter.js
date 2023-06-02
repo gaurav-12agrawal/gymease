@@ -12,7 +12,7 @@ reviewrouter.post("/detials/:id/reviews/:token", authenticate, async (req, res) 
         const gym = await gyms.findById({ _id: id });
         const review = new Review(req.body)
         review.author = req.userID
-        console.log(review)
+
         gym.reviews.push(review)
         await review.save();
         await gym.save();

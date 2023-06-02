@@ -97,7 +97,7 @@ userforrouter.post("/:id/:token", async (req, res) => {
         const verifyToken = jwt.verify(token, process.env.MY_SECRET);
         validuser.verifytoken = null
         await validuser.save();
-        console.log(validuser.verifytoken)
+
         if (validuser && verifyToken._id) {
             const newpassword = await bcrypt.hash(password, 12);
             const setnewuserpass = await User.findByIdAndUpdate({ _id: id }, { password: newpassword });

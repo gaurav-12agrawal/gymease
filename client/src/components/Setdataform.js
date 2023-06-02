@@ -104,7 +104,7 @@ const Setdataform = () => {
         formData.append("sexm", data.sex.male)
         formData.append("sexf", data.sex.female)
         formData.append("varified", data.varified)
-        console.log(formData)
+
         let res;
 
         try {
