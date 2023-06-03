@@ -142,22 +142,24 @@ const Signup = () => {
                     <form>
                         <div className={signupcss.entrydiv}>
 
+                            <label className={signupcss.lname} htmlFor='name'>Name </label>
                             <input className={signupcss.inputdiv} type='text' id='name' onChange={handleInputs} value={user.name} name='name' placeholder='johndoe'></input>
+
                         </div>
                         <div className={signupcss.entrydiv}>
-
+                            <label className={signupcss.lname} htmlFor='email'>Email </label>
                             <input className={signupcss.inputdiv} type='email' id='email' onChange={handleInputs} value={user.email} name='email' placeholder='johndoe@gmail.com'></input>
                         </div>
                         <div className={signupcss.entrydiv}>
-
+                            <label className={signupcss.lname} htmlFor='phone'>Phone </label>
                             <input className={signupcss.inputdiv} type='phone' id='phone' onChange={handleInputs} value={user.phone} name='phone' placeholder='+91...'></input>
                         </div>
                         <div className={signupcss.entrydiv}>
-
+                            <label className={signupcss.lname} htmlFor='password'>Password </label>
                             <input className={signupcss.inputdiv} type='password' id='password' onChange={handleInputs} value={user.password} name='password' placeholder='........'></input>
                         </div>
                         <div className={signupcss.entrydiv}>
-
+                            <label className={signupcss.lname} htmlFor='cpassword'>Confirm Password </label>
                             <input className={signupcss.inputdiv} type='password' id='cpassword' onChange={handleInputs} value={user.cpassword} name='cpassword' placeholder='........'></input>
                         </div>
 
