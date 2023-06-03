@@ -12,6 +12,11 @@ const Login = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
+    const handleKeyUp = (event) => {
+        if (event.key === 'Enter') {
+            loginUser(event);
+        }
+    };
     const loginUser = async (e) => {
 
         e.preventDefault(); //some times form reload itself so we use 
@@ -92,12 +97,12 @@ const Login = () => {
 
                             <div className={signupcss.entrydiv}>
 
-                                <input className={signupcss.inputdiv} type='email' id='email' name='email' placeholder='johndoe@gmail.com' value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                                <input className={signupcss.inputdiv} type='email' id='email' name='email' placeholder='johndoe@gmail.com' value={email} onChange={(e) => setEmail(e.target.value)} onKeyDown={handleKeyUp}></input>
                             </div>
 
                             <div className={signupcss.entrydiv}>
 
-                                <input className={signupcss.inputdiv} value={password} type='password' id='password' name='password' placeholder='........' onChange={(e) => setPassword(e.target.value)}></input>
+                                <input className={signupcss.inputdiv} value={password} type='password' id='password' name='password' placeholder='........' onChange={(e) => setPassword(e.target.value)} onKeyDown={handleKeyUp}></input>
                             </div>
 
 
