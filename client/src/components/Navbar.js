@@ -49,6 +49,16 @@ function Navbar() {
     const hidediv = () => {
         sethide(!hide)
     }
+    function getCookie(cookieName) {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            if (cookie.startsWith(cookieName + "=")) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     return (
         <>
@@ -68,7 +78,7 @@ function Navbar() {
                         <input onKeyUp={handleKeyDown} type="search" id="" name="" ref={inputElement} className='navbar_search_inp' placeholder='Find Your Gym...' onChange={handleChange}></input>
                         <button className='navbar_search_button' onClick={handleClick} >Search</button>
                     </div>
-                    {!document.cookie && <li className='Navbar_li lihidelogin'> <Link to="/signup">
+                    {!getCookie('jwtoken') && <li className='Navbar_li lihidelogin'> <Link to="/signup">
 
 
                         <button className='Login_button_navbar' >
@@ -78,7 +88,7 @@ function Navbar() {
 
                     </Link>  </li>}
 
-                    {document.cookie && <li className='Navbar_li lihidelogin'> <Link to="/logout">
+                    {getCookie('jwtoken') && <li className='Navbar_li lihidelogin'> <Link to="/logout">
 
 
                         <button className='Login_button_navbar' >
@@ -105,7 +115,7 @@ function Navbar() {
 
                     <li className='Navbar_li ' onClick={hidediv}><Link to="/contact" className="nav-link li_item Navbar_li ">Contact Us</Link></li>
 
-                    {!document.cookie && <li className='Navbar_li'> <Link to="/signup">
+                    {!getCookie('jwtoken') && <li className='Navbar_li'> <Link to="/signup">
 
 
                         <button className='Login_button_navbar Login_button_navbarhide' onClick={hidediv}>
@@ -115,7 +125,7 @@ function Navbar() {
 
                     </Link>  </li>}
 
-                    {document.cookie && <li className='Navbar_li'> <Link to="/logout">
+                    {getCookie('jwtoken') && <li className='Navbar_li'> <Link to="/logout">
 
 
                         <button className='Login_button_navbar Login_button_navbarhide' onClick={hidediv} >
