@@ -16,6 +16,7 @@ const paymentrouter = require('./Router/paymentrouter')
 app.use(express.json());
 app.use(cors({
     origin: ["https://gymozy.com",
+        "https://gymozy.in",
         "https://localhost:3000"],
     credentials: true,
     allowedHeaders: [
