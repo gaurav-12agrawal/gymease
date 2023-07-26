@@ -51,7 +51,7 @@ function Home() {
                         <p className="cont_1">Welcome To Our Fitness Support !</p>
                         <p className="cont_2">Enrich yourself in the world of <br></br>
                             <span className="big_name_home">G</span>ymozy</p>
-                        <p className="cont_3">Offering Gym solution since 2023</p>
+                        <p className="cont_3">Offering Gym solution since 2024</p>
                         <div className="explore_button_div">
                             <button className="Explore_button" onClick={scrolldown}>Explore Now</button>
                         </div>
