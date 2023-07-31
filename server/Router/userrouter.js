@@ -45,13 +45,35 @@ userrouter.post('/register', validateuser, async (req, res) => {
             })
             await user.save()
             // send mail to user
+
             var mailoptions = {
                 from: `verify your Email :<${process.env.MAIL_USERNAME_VERIFY}>`,
                 to: user.email,
                 subject: 'Gymozy - Verify Your Email',
-                html: `<h1>${user.name} Thanks for Registration</h1>
-                       <h5>Please verify your email to continue...</h5>
-                       <a href="https://gym-54v4.onrender.com/user/verifyemail?token=${user.emailtoken} " >verify Here</a>
+                html: `
+                <img alt="Image" style="width: 100%; height: 100%;" src= 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1685128198/Important%20image/logo_zzpwsu.jpg' ></img>  
+                <div style="width: 100%; height: 100%; background-color:green;" ><p>Gymozy Verification Link</p></div>
+
+                <h1>Dear ${user.name},</h1>
+                       <p>Thank you for choosing Gymozy as your fitness partner. We are thrilled to have you on board! To ensure the security of your account and provide you with a seamless experience, we kindly request you to verify your account.
+
+                       To proceed with the verification process, please click on the link provided below:</p>
+                       
+                       <button>
+                       <a href="https://gym-54v4.onrender.com/user/verifyemail?token=${user.emailtoken} " >verify Here</a></button>
+                       <p>
+                       By clicking on the link, you will be directed to a secure page where you can verify your account with Gymozy. This step is essential to activate your account and gain access to all the exclusive features and services we offer.
+                       
+                       If you did not sign up for a Gymozy account, please ignore this email. Rest assured that your information is safe and secure.
+                       
+                       If you encounter any issues during the verification process or have any questions regarding your account, feel free to reach out to our support team at support.gymozy@gmail.com . We are always here to assist you.
+                       
+                       Thank you for choosing Gymozy as your fitness companion. We are excited to embark on this health and wellness journey together. Let's get started!
+                       
+                       Best regards,
+                       
+                       The Gymozy Team</p>
+                       
                 `
             }
             //send mail

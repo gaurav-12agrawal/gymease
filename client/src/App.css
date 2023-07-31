@@ -594,9 +594,18 @@ input:focus {
   margin-top: 200px;
 }
 
+.errorpage-image {
+  height: 70vh;
+  width: 100%;
+}
+
 @media screen and (max-width: 1140px) {
   .home_left {
     display: none;
+  }
+
+  .errorpage-image {
+    object-fit: cover;
   }
 
   .home_right {
@@ -717,8 +726,4 @@ input:focus {
   .home_city_cards {
     width: 100%;
   }
-}
-
-.errorpage-image {
-  height: 70vh;
 }
