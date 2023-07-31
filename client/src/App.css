@@ -718,3 +718,7 @@ input:focus {
     width: 100%;
   }
 }
+
+.errorpage-image {
+  height: 70vh;
+}
