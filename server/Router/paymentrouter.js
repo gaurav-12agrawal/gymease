@@ -199,14 +199,12 @@ paymentrouter.get('/item/verifyemail/:token/:email', async (req, res) => {
                    <br/><br/><br/>
                   <div style="width: 100%; height: 90px; background-color:green;display:flex;
                   justify-content:center;align-items:center; margin:auto;" ><p style="color:white; font-size:20px ;margin:auto;" >Payment Confirmation Mail</p></div>
-                  <h2>Dear ${validitem.name},</h2>
+                 
                   <p>Thank you for choosing <b>Gymozy</b> for your fitness needs! We are excited to confirm your booking for the following session:
                   </p>
-                  <p>Booking ID: ${(validitem._id).toUpperCase()}</p>
-                  <p>Payment Amount:INR ${validitem.amount}</p>
+                
                   <P>Please find below the payment screenshot for your reference:</P>
-                  <img alt="Image" style="width: 100%; height: 100%;display:flex;
-                  justify-content:center;align-items:center; margin:auto;border-radius:7px;" src= '${validitem.images[0].url}' ></img>
+                  
                   <p>For remaining details please visit gymozy.com/bookings </p>
                   <p>
                   Your payment has been successfully processed, and your booking is <b>confirmed</b>. You are all set to achieve your fitness goals with us!<br/><br/>
