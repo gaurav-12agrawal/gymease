@@ -124,7 +124,7 @@ const Bookingcard = (props) => {
                 <div className={Cardcss.second}>
                     <p className={Cardcss.secondname} >Name : <b> {props.details.name}</b></p>
                     <p className={Cardcss.secondamount} >Amount paid  : <b>{props.details.amount} ₹ </b></p>
-                    <p className={Cardcss.secondid} >Order Id :<b> {(props.details._id)}</b></p>
+                    <p className={Cardcss.secondid} >Order Id :<b> {props.details._id}</b></p>
                     <p >Type : <b>{props.details.type}</b></p>
                     <hr className={Cardcss.secondtype}></hr>
                 </div>
