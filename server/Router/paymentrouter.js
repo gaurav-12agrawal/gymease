@@ -106,9 +106,6 @@ paymentrouter.post('/gym/:id/paymentform/:token', authenticate, upload.array('im
         from: process.env.MAIL_USERNAME_VERIFY,
         to: email,
         subject: "Verify your id for payment information",
-        // html: `<h1>${req.body.yname} Thanks for choosing us</h1>
-        //                <h5>Please verify your email...</h5>
-        //                <a href="https://gym-54v4.onrender.com/item/verifyemail/${token}/${email} " >verify Here</a>`
         html: `
         
         <div  style="display:flex;justify-content:center;align-items:center; margin:auto;" >
@@ -209,9 +206,9 @@ paymentrouter.get('/item/verifyemail/:token/:email', async (req, res) => {
             })
 
 
-            return res.status(200).send('We have send payment details on your mail id');
+            return res.status(200).send(`Congratulations! Your email ${email}  on Gymozy has been successfully verified, and we have promptly sent the booking details to your mail id for a seamless experience`);
         } else {
-            return res.status(401).json({ status: 401, message: "Your ticket expired ,if you have paid money than contact to Gymozy in contact us section and see your item in mybooking section" })
+            return res.status(401).json({ status: 401, message: "Your ticket expired ,if you have paid for the booking then contact to Gymozy in contact us section or direct mail us on support.gymozy@gmail.com . " })
         }
 
     }
@@ -241,9 +238,38 @@ paymentrouter.patch('/item/cenclemyitem/:id/:token', authenticate, async (req, r
             from: process.env.MAIL_USERNAME_CENCEL,
             to: maillist,
             subject: "Cencellation request",
-            html: `<h1> We have received cancellation request for you booking ... </h1>
-                       <h5>Your order id is ${id}</h5>
-                       <h4> We will refund you in next 24 working hours<h4>`
+            // html: `<h1> We have received cancellation request for you booking ... </h1>
+            //            <h5>Your order id is ${id}</h5>
+            //            <h4> We will refund you in next 24 working hours<h4>`
+            html: `
+            <div  style="display:flex;justify-content:center;align-items:center; margin:auto;" >
+            <img  alt="Image" style="width: 50%; height: 50%; margin:auto;  border-radius:100%;" src= 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1685128198/Important%20image/logo_zzpwsu.jpg' ></img></div> 
+             <br/><br/><br/>
+            <div style="width: 100%; height: 90px; background-color:green;display:flex;
+            justify-content:center;align-items:center; margin:auto;" ><p style="color:white; font-size:20px ;margin:auto;" >Gymozy Verification Link</p></div>
+            <h3>Order ID:${id.toUpperCase()}</h3>
+                   <p>We hope this email finds you well. We are writing to confirm that we have received your cancellation request for the order with ID <b>${id.toUpperCase()}</b>.
+                   <br/><br/></p>
+                 
+                   <p>
+                   We understand that sometimes plans change, and we are committed to ensuring your satisfaction. Rest assured that we are processing your cancellation request, and we will take care of it promptly.<br/><br/>
+
+As per our policy, we will cancel your order within the next 24 hours and initiate the refund process. Please note that the refund will be processed back to the original payment method used during the purchase.<br/><br/>
+
+While the refund will be initiated immediately, please allow 5-7 working days for the funds to reflect in your account. This duration may vary depending on your bank or financial institution's processing time.<br/><br/>
+
+If you have any further questions or require any assistance, please don't hesitate to contact our customer support team at support.gymozy@gmail.com. We are here to help!<br/><br/>
+
+Once again, we apologize for any inconvenience this cancellation may have caused. We value your patronage and hope to serve you again in the future.<br/><br/>
+
+Thank you for your understanding.<br/><br/>
+
+Best regards,<br/><br/>
+
+Team Gymozy
+                  </p>
+                   
+            `
         }
         //send mail
         transporter1.sendMail(mailOptions, (error, info) => {
