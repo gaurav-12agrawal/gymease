@@ -66,7 +66,7 @@ const Login = () => {
                 theme: "dark",
             })
             Cookies.set('jwtoken', data.token, { expires: 30 });
-            navigate('/')
+            navigate(-1)
 
         }
         if (res.status === 400) {
