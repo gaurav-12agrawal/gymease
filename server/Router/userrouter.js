@@ -62,8 +62,9 @@ userrouter.post('/register', validateuser, async (req, res) => {
 
                        To proceed with the verification process, please click on the link provided below:</p>
                        
-                       <button>
-                       <a href="https://gym-54v4.onrender.com/user/verifyemail?token=${user.emailtoken} " >verify Here</a></button>
+                       <button  style="height:40px;padding :10px;display:flex;
+                       justify-content:center;align-items:center; margin:auto;">
+                       <a href="https://gym-54v4.onrender.com/user/verifyemail?token=${user.emailtoken} " style="color : white; text-decoration: none;" >verify Here</a></button>
                        <p>
                        By clicking on the link, you will be directed to a secure page where you can verify your account with Gymozy. This step is essential to activate your account and gain access to all the exclusive features and services we offer.<br/><br/><br/>
                        
