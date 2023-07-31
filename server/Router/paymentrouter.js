@@ -186,13 +186,42 @@ paymentrouter.get('/item/verifyemail/:token/:email', async (req, res) => {
                 from: process.env.MAIL_USERNAME_PAYMENT,
                 to: maillist,
                 subject: "Payment Reciept",
-                html: `<h1>${validitem.name} Thanks for choosing us</h1>
-                   <h5>you have sent INR - ${validitem.amount}</h5>
-                   <h5>Your order id is - ${validitem._id}</h5>
-                   <h5>Remaining detials you can see in My booking section on our website </h5>
-                   <img alt="Image" style="width: ${width}px; height: ${height}px;" src= '${validitem.images[0].url}' ></img>
+                // html: `<h1>${validitem.name} Thanks for choosing us</h1>
+                //    <h5>you have sent INR - ${validitem.amount}</h5>
+                //    <h5>Your order id is - ${validitem._id}</h5>
+                //    <h5>Remaining detials you can see in My booking section on our website </h5>
+                //    <img alt="Image" style="width: ${width}px; height: ${height}px;" src= '${validitem.images[0].url}' ></img>
 
+                //   `
+                html: `
+                  <div  style="display:flex;justify-content:center;align-items:center; margin:auto;" >
+                  <img  alt="Image" style="width: 50%; height: 50%; margin:auto;  border-radius:100%;" src= 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1685128198/Important%20image/logo_zzpwsu.jpg' ></img></div> 
+                   <br/><br/><br/>
+                  <div style="width: 100%; height: 90px; background-color:green;display:flex;
+                  justify-content:center;align-items:center; margin:auto;" ><p style="color:white; font-size:20px ;margin:auto;" >Payment Confirmation Mail</p></div>
+                  <h2>Dear ${validitem.name},</h2>
+                  <p>Thank you for choosing <b>Gymozy</b> for your fitness needs! We are excited to confirm your booking for the following session:
+                  </p>
+                  <p>Booking ID: ${(validitem._id).toUpperCase()}</p>
+                  <p>Payment Amount:INR ${validitem.amount}</p>
+                  <P>Please find below the payment screenshot for your reference:</P>
+                  <img alt="Image" style="width: 100%; height: 100%;display:flex;
+                  justify-content:center;align-items:center; margin:auto;border-radius:7px;" src= '${validitem.images[0].url}' ></img>
+                  <p>For remaining details please visit gymozy.com/bookings </p>
+                  <p>
+                  Your payment has been successfully processed, and your booking is <b>confirmed</b>. You are all set to achieve your fitness goals with us!<br/><br/>
+  
+  As part of our commitment to providing exceptional service, we will generate and send your detailed invoice within the next 24 hours. This invoice will include a breakdown of the services booked and any applicable discounts.<br/><br/>
+  
+  Should you have any questions or need further assistance, please feel free to contact our friendly customer support team at support.gymozy@gmail.com .<br/><br/>
+  
+  Thank you for being a valued member of our fitness community. We look forward to seeing you at the gym and helping you make progress towards a healthier and stronger you!<br/><br/><br/>
+  
+  Best regards,<br/><br/>
+                         
+  The Gymozy Team</p>
                   `
+
             }
             //send mail
             transporter.sendMail(mailOptions, (error, info) => {
