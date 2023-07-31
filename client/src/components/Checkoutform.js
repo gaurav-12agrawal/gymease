@@ -207,7 +207,7 @@ const Checkoutform = () => {
                     <div className={Checkoutcss.blinkforcheck}>** Please read following steps before booking your gym **</div>
                     <p className={Checkoutcss.cancleheading}>Steps for booking a gym:-
                     </p>
-                    <p className={Checkoutcss.cancleitem}><b>1.</b> <b>Double-check</b> your <b>email</b> address ( Entering the wrong email address may cause your bookings <b>not</b> to appear in the 'My Booking' section ).
+                    <p className={Checkoutcss.cancleitem}><b>1.</b> <b>Double-check</b> your <b>email</b> address and verify the email address with in <b>24 hrs.</b> by clicking on the link provided in the email sent to your inbox. ( Entering the wrong email address may cause your bookings <b>not</b> to appear in the 'My Booking' section ).
 
                     </p>
                     <p className={Checkoutcss.cancleitem}><b>2.</b> Please attach the <b>correct screenshot of the payment </b>for the confirmed booking. (Providing an incorrect screenshot or a payment with less than the required amount may result in the <b>cancellation</b> of the booking).

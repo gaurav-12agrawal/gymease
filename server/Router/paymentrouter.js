@@ -210,7 +210,7 @@ paymentrouter.get('/item/verifyemail/:token/:email', async (req, res) => {
                   justify-content:center;align-items:center; margin:auto;border-radius:7px;" src= '${validitem.images[0].url}' ></img>
                   <p>For remaining details please visit gymozy.com/booking </p>
                   <p>
-                  Your payment has been successfully processed, and your booking is <b>confirmed</b>. You are all set to achieve your fitness goals with us!<br/><br/>
+                  Your payment has been successfully processed, and your booking is <b>confirmed</b> within 24 hour upon receiving your accurate payment details. You are all set to achieve your fitness goals with us!<br/><br/>
   
   As part of our commitment to providing exceptional service, we will generate and send your detailed invoice within the next 24 hours. This invoice will include a breakdown of the services booked and any applicable discounts.<br/><br/>
   
