@@ -52,17 +52,17 @@ userforrouter.post("/sendpasswordlink", async (req, res) => {
                 </p>
                 <p>To reset your password, please click on the link provided below. <b>Please note that this link will be valid for the next 2 minutes for security purposes:</b>
                 </p>
-                <a href="https://gymozy.com/forgetpassword/${userfind._id}/${setusertoken.verifytoken}" >PassWord Reset Link</a><br/>
+                <a href="https://gymozy.com/forgetpassword/${userfind._id}/${setusertoken.verifytoken}" >Password Reset Link</a><br/>
                 <p>
-                By clicking on the link, you will be directed to a secure page where you can reset your Gymozy account password. If you did not initiate this password reset, kindly ignore this email. Rest assured that your account is safe and secure.</br></br>
+                By clicking on the link, you will be directed to a secure page where you can reset your Gymozy account password. If you did not initiate this password reset, kindly ignore this email. Rest assured that your account is safe and secure.<br/><br/>
                 
-                For security reasons, we recommend that you choose a strong and unique password that you have not used for any other service.</br></br>
+                For security reasons, we recommend that you choose a strong and unique password that you have not used for any other service.<br/><br/>
                 
-                If you encounter any issues during the password reset process or have any concerns regarding your account, please don't hesitate to contact our support team at support.gymozy@gmail.com . We are here to assist you and ensure a smooth experience.</br></br>
+                If you encounter any issues during the password reset process or have any concerns regarding your account, please don't hesitate to contact our support team at support.gymozy@gmail.com . We are here to assist you and ensure a smooth experience.<br/><br/>
                 
-                Thank you for choosing Gymozy as your fitness partner. We value your trust and strive to provide the best service possible.</br></br>
+                Thank you for choosing Gymozy as your fitness partner. We value your trust and strive to provide the best service possible.<br/><br/>
                 
-                Best regards,</br></br>
+                Best regards,<br/><br/>
                 
                 The Gymozy Team
                 </p>
