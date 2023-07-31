@@ -202,8 +202,8 @@ paymentrouter.get('/item/verifyemail/:token/:email', async (req, res) => {
                   <h2>Dear ${validitem.name},</h2>
                   <p>Thank you for choosing <b>Gymozy</b> for your fitness needs! We are excited to confirm your booking for the following session:
                   </p>
-                  <p>Booking ID: ${validitem._id.toUpperCase()}</p>
-                  <p>Payment Amount:INR ${validitem.amount}</p>
+                  <p>Booking ID: ${validitem._id}</p>
+                  <p>Payment Amount:INR- ${validitem.amount}</p>
   
                   <P>Please find below the payment screenshot for your reference:</P>
                   
