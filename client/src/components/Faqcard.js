@@ -6,7 +6,9 @@ const Faqcard = (props) => {
     const [rotation, setRotation] = useState(180);
 
     const handleRotateClick = () => {
-        setRotation(rotation + 180);
+        if (rotation === 180)
+            setRotation(rotation + 180);
+        else setRotation(rotation - 180)
     };
     const toggle = () => {
         setline(!line)

@@ -34,6 +34,21 @@ const Faques = [
         id: 7,
         Question: "What is included in the price?",
         Answer: "The price includes the following: Gym Access: The price covers the cost of accessing the gym facilities, including workout areas, equipment, and amenities. Classes and Training Sessions: Depending on the gym and package you choose, the price may include access to various fitness classes, such as yoga, aerobics, or spinning, as well as training sessions with certified instructors. Additional Services: Some gyms may offer additional services as part of the price, such as personalized workout plans, nutritional guidance, or wellness consultations. These services can vary, so it's important to check with the specific gym for details."
+    },
+    {
+        id: 8,
+        Question: "Is the price inclusive of taxes?",
+        Answer: "Yes, taxes are included in the price. The displayed price already accounts for any applicable taxes, ensuring that you have a clear understanding of the total amount you will be charged."
+    },
+    {
+        id: 9,
+        Question: "Where can I find more details about the available facilities?",
+        Answer: "To obtain more information about the facilities available, please refer to the detailed information provided with the gym details. This information can typically be found on the GymEase website , where you will find comprehensive descriptions of the facilities, including equipment, amenities, and additional services offered. Additionally, you can reach out to GymEase's customer support for any specific queries or clarification regarding the facilities. They will be able to provide you with detailed information and address any questions you may have about the available amenities at the gym."
+    },
+    {
+        id: 10,
+        Question: "Is it possible to modify my booking?",
+        Answer: "Yes, you can make changes to your booking. If you wish to modify your gym booking, you have the option to cancel it before the scheduled starting date. In such cases, GymEase will provide you with a full refund. Once the booking is canceled, you can proceed to make a new booking with the desired modifications. This allows you the flexibility to adjust your booking according to your needs. Please note that any modifications or changes are subject to availability and the terms and conditions of GymEase."
     }
 ]
 export default Faques;
