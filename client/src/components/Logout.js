@@ -24,7 +24,7 @@ const LogOut = () => {
             .then((res) => {
                 if (res.status === 200) {
                     setload(false)
-                    navigate('/')
+                    navigate('/login')
                     Cookies.remove('jwtoken');
 
                     return toast.success("Logout Successfully", {
