@@ -108,7 +108,7 @@ userrouter.get('/user/verifyemail', async (req, res) => {
             user.emailtoken = null;
             user.isvarified = true;
             await user.save();
-            return res.status(200).send('Success ! Now go to login page');
+            return res.status(200).send("Congratulations! Your Gmail on Gymozy has been successfully verified and is now ready for seamless navigation.");
         }
         if (!user) {
             return res.status(400).send('Link Expired');
