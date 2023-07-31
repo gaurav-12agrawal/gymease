@@ -160,7 +160,7 @@ superadminrouter.post("/sendpasswordlinkadmin", async (req, res) => {
                 from: process.env.MAIL_USERNAME_VERIFY,
                 to: email,
                 subject: "Sending Email For password Reset for Super Admin",
-                text: `This Link Valid For 2 MINUTES https://gymozy.com/forgetpasswordadmin/${userfind._id}/${setusertoken.verifytoken}`
+                text: `This Link Valid For 2 MINUTES https://gymozy.in/forgetpasswordadmin/${userfind._id}/${setusertoken.verifytoken}`
             }
 
             transporter.sendMail(mailOptions, (error, info) => {
