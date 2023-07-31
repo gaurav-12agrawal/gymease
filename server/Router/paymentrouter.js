@@ -106,9 +106,48 @@ paymentrouter.post('/gym/:id/paymentform/:token', authenticate, upload.array('im
         from: process.env.MAIL_USERNAME_VERIFY,
         to: email,
         subject: "Verify your id for payment information",
-        html: `<h1>${req.body.yname} Thanks for choosing us</h1>
-                       <h5>Please verify your email...</h5>
-                       <a href="https://gym-54v4.onrender.com/item/verifyemail/${token}/${email} " >verify Here</a>`
+        // html: `<h1>${req.body.yname} Thanks for choosing us</h1>
+        //                <h5>Please verify your email...</h5>
+        //                <a href="https://gym-54v4.onrender.com/item/verifyemail/${token}/${email} " >verify Here</a>`
+        html: `
+        
+        <div  style="display:flex;justify-content:center;align-items:center; margin:auto;" >
+        <img  alt="Image" style="width: 50%; height: 50%; margin:auto;  border-radius:100%;" src= 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1685128198/Important%20image/logo_zzpwsu.jpg' ></img></div> 
+         <br/><br/><br/>
+        <div style="width: 100%; height: 90px; background-color:green;display:flex;
+        justify-content:center;align-items:center; margin:auto;" ><p style="color:white; font-size:20px ;margin:auto;" >Payment Receipt Verification</p></div>
+
+        <h2>Dear ${req.body.yname},</h2>
+               <p>We are delighted to inform you that your gym session booking with Gymozy was successful! We look forward to having you join us for an invigorating fitness experience. Before we proceed, we kindly request you to verify your Gmail address.
+
+               <br/><br/>
+
+               To complete the verification process, please click on the link provided below:
+
+               </p>
+               
+               
+               <a href="https://gym-54v4.onrender.com/item/verifyemail/${token}/${email} " >Verify Email</a><br/>
+               <p>
+               By verifying your Gmail address, you'll receive important updates about your booking, exclusive offers, and valuable fitness-related content to support you on your fitness journey.<br/><br/><br/>
+               
+               Once you have verified your email address, we will promptly send you the payment receipt for your recent booking. Rest assured, your payment is confirmed, and your spot is reserved for the specified date and time.
+
+<br/><br/><br/>
+               
+If you have any questions or need further assistance regarding the verification process, your booking, or any other matter, don't hesitate to contact our friendly support team at support.gymozy@gmail.com . We are here to assist you and ensure a smooth experience.
+
+<br/><br/><br/>
+               
+               Thank you for choosing Gymozy as your fitness companion. We are excited to embark on this health and wellness journey together. Let's get started!<br/><br/><br/>
+               
+               Best regards,<br/><br/>
+               
+               The Gymozy Team</p>
+               
+               
+        
+        `
     }
     //send mail
     transporter2.sendMail(mailOptions, (error, info) => {
