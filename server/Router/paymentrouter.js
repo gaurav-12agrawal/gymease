@@ -208,7 +208,7 @@ paymentrouter.get('/item/verifyemail/:token/:email', async (req, res) => {
                   <P>Please find below the payment screenshot for your reference:</P>
                   <img alt="Image" style="width: 100%; height: 100%;display:flex;
                   justify-content:center;align-items:center; margin:auto;border-radius:7px;" src= '${validitem.images[0].url}' ></img>
-                  <p>For remaining details please visit gymozy.com/bookings </p>
+                  <p>For remaining details please visit gymozy.com/booking </p>
                   <p>
                   Your payment has been successfully processed, and your booking is <b>confirmed</b>. You are all set to achieve your fitness goals with us!<br/><br/>
   
