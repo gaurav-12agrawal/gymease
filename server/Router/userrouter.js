@@ -51,11 +51,11 @@ userrouter.post('/register', validateuser, async (req, res) => {
                 to: user.email,
                 subject: 'Gymozy - Verify Your Email',
                 html: `
-                <div  style="display:flex;justify-content:center;align-items:center;" >
-                <img  alt="Image" style="width: 50%; height: 50%;  border-radius:100%;" src= 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1685128198/Important%20image/logo_zzpwsu.jpg' ></img></div> 
+                <div  style="display:flex;justify-content:center;align-items:center; margin:auto;" >
+                <img  alt="Image" style="width: 50%; height: 50%; margin:auto;  border-radius:100%;" src= 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1685128198/Important%20image/logo_zzpwsu.jpg' ></img></div> 
                  <br/><br/><br/>
-                <div style="width: 90%; height: 90px; background-color:green;display:flex;
-                justify-content:center;align-items:center;" ><p style="color:white; font-size:"18px" " >Gymozy Verification Link</p></div>
+                <div style="width: 100%; height: 90px; background-color:green;display:flex;
+                justify-content:center;align-items:center; margin:auto;" ><p style="color:white; font-size:20px ;margin:auto;" >Gymozy Verification Link</p></div>
 
                 <h2>Dear ${user.name},</h2>
                        <p>Thank you for choosing Gymozy as your fitness partner. We are thrilled to have you on board! To ensure the security of your account and provide you with a seamless experience, we kindly request you to verify your account.<br/><br/>
