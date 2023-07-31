@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cors({
     origin: ["https://gymozy.com",
         "https://gymozy.in",
-        "localhost:3000"],
+        'http://localhost'],
     credentials: true,
     allowedHeaders: [
         'Access-control-allow-origin',
