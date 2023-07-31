@@ -38,7 +38,7 @@ const Faques = [
     {
         id: 8,
         Question: "Is the price inclusive of taxes?",
-        Answer: "Yes, taxes are included in the price. The displayed price already accounts for any applicable taxes, ensuring that you have a clear understanding of the total amount you will be charged."
+        Answer: "Yes, taxes are included in the price. The displayed price already accounts for any applicable taxes, ensuring that you have a clear understanding of the total amount you will be charged."
     },
     {
         id: 9,
