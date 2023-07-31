@@ -109,6 +109,16 @@ function Mybooking() {
                                     <p className={Bookcss.uprightemail}> <span className={Bookcss.mailicon}> <AiOutlineMail /></span> {detail.email}</p>
                                 </div>
                             </div>
+                            <div className={Bookcss.steptocancle_div}>
+                                <p className={Bookcss.cancleheading}>Steps for cancelling a gym :</p>
+                                <p><b>1.</b> To cancel the gym booking, go to the 'My Booking' section and click on the 'Cancel' button.
+                                </p>
+                                <p><b>2.</b>  Please wait for 24 hours to receive <b>confirmation</b> for the cancellation request.
+                                </p>
+                                <p><b>3.</b> After cancellation, we will initiate the refund process, and you can expect to receive your refund within <b> 5-7 working days </b> if your payment is confirmed.
+
+                                </p>
+                            </div>
                             <div className={Bookcss.mid} ><button onClick={handleinput} className={Bookcss.bookbutton}> <BsBagPlusFill /> &nbsp;  Book Now</button> </div>
                             <div className={Bookcss.down} >
 

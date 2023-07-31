@@ -115,6 +115,24 @@
     padding-bottom: 100px;
 }
 
+.steptocancle_div {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-left: green 3px solid;
+    font-family: 'ubuntu';
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cancleheading {
+    font-size: 25px;
+    font-weight: 500;
+}
+
 @media screen and (max-width: 1115px) {
     .upright {
         width: 35%;
