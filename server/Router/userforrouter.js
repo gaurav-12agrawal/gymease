@@ -44,7 +44,7 @@ userforrouter.post("/sendpasswordlink", async (req, res) => {
                 subject: "Sending Email For password Reset",
                 html: `
                 <div  style="display:flex;justify-content:center;align-items:center; margin:auto;" >
-                <img  alt="Image" style="width: 50%; height: 50%; margin:auto;  border-radius:100%;" src= 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1685128198/Important%20image/logo_zzpwsu.jpg' ></img></div> 
+                <img  alt="Image" style="width: 50%; height: 50%; margin:auto;  border-radius:100%;" src= 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1690913288/Important%20image/GYMOZY_LOGO_llplc3.png' ></img></div> 
                  <br/><br/><br/>
                 <div style="width: 100%; height: 90px; background-color:green;display:flex;
                 justify-content:center;align-items:center; margin:auto;" ><p style="color:white; font-size:20px ;margin:auto;" >Password Reset Link</p></div>

@@ -109,7 +109,7 @@ paymentrouter.post('/gym/:id/paymentform/:token', authenticate, upload.array('im
         html: `
         
         <div  style="display:flex;justify-content:center;align-items:center; margin:auto;" >
-        <img  alt="Image" style="width: 50%; height: 50%; margin:auto;  border-radius:100%;" src= 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1685128198/Important%20image/logo_zzpwsu.jpg' ></img></div> 
+        <img  alt="Image" style="width: 50%; height: 50%; margin:auto;  border-radius:100%;" src= 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1690913288/Important%20image/GYMOZY_LOGO_llplc3.png' ></img></div> 
          <br/><br/><br/>
         <div style="width: 100%; height: 90px; background-color:green;display:flex;
         justify-content:center;align-items:center; margin:auto;" ><p style="color:white; font-size:20px ;margin:auto;" >Payment Receipt Verification</p></div>
@@ -186,16 +186,9 @@ paymentrouter.get('/item/verifyemail/:token/:email', async (req, res) => {
                 from: process.env.MAIL_USERNAME_PAYMENT,
                 to: maillist,
                 subject: "Payment Reciept",
-                // html: `<h1>${validitem.name} Thanks for choosing us</h1>
-                //    <h5>you have sent INR - ${validitem.amount}</h5>
-                //    <h5>Your order id is - ${validitem._id}</h5>
-                //    <h5>Remaining detials you can see in My booking section on our website </h5>
-                //    <img alt="Image" style="width: ${width}px; height: ${height}px;" src= '${validitem.images[0].url}' ></img>
-
-                //   `
                 html: `
                   <div  style="display:flex;justify-content:center;align-items:center; margin:auto;" >
-                  <img  alt="Image" style="width: 50%; height: 50%; margin:auto;  border-radius:100%;" src= 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1685128198/Important%20image/logo_zzpwsu.jpg' ></img></div> 
+                  <img  alt="Image" style="width: 50%; height: 50%; margin:auto;  border-radius:100%;" src= 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1690913288/Important%20image/GYMOZY_LOGO_llplc3.png' ></img></div> 
                    <br/><br/><br/>
                   <div style="width: 100%; height: 90px; background-color:green;display:flex;
                   justify-content:center;align-items:center; margin:auto;" ><p style="color:white; font-size:20px ;margin:auto;" >Payment Confirmation Mail</p></div>
@@ -268,12 +261,9 @@ paymentrouter.patch('/item/cenclemyitem/:id/:token', authenticate, async (req, r
             from: process.env.MAIL_USERNAME_CENCEL,
             to: maillist,
             subject: "Cencellation request",
-            // html: `<h1> We have received cancellation request for you booking ... </h1>
-            //            <h5>Your order id is ${id}</h5>
-            //            <h4> We will refund you in next 24 working hours<h4>`
             html: `
             <div  style="display:flex;justify-content:center;align-items:center; margin:auto;" >
-            <img  alt="Image" style="width: 50%; height: 50%; margin:auto;  border-radius:100%;" src= 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1685128198/Important%20image/logo_zzpwsu.jpg' ></img></div> 
+            <img  alt="Image" style="width: 50%; height: 50%; margin:auto;  border-radius:100%;" src= 'https://res.cloudinary.com/dgfn40mfc/image/upload/v1690913288/Important%20image/GYMOZY_LOGO_llplc3.png' ></img></div> 
              <br/><br/><br/>
             <div style="width: 100%; height: 90px; background-color:green;display:flex;
             justify-content:center;align-items:center; margin:auto;" ><p style="color:white; font-size:20px ;margin:auto;" >Gymozy Verification Link</p></div>

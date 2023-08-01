@@ -72,7 +72,7 @@ function Navbar() {
                                 <RxCross1 />
                         }
                     </div>
-                    <li className='Navbar_li'> <img src='https://res.cloudinary.com/dgfn40mfc/image/upload/v1685128198/Important%20image/logo_zzpwsu.jpg' alt="logo" className='logo_navbar' /></li>
+                    <li className='Navbar_li'> <img src='https://res.cloudinary.com/dgfn40mfc/image/upload/v1690913288/Important%20image/GYMOZY_LOGO_llplc3.png' alt="logo" className='logo_navbar' /></li>
                     <li className='Navbar_li Name_comp' >  <Link to="/" className="nav-link ">Gymozy</Link></li>
                     <div className='Navbar_search'>
                         <input onKeyUp={handleKeyDown} type="search" id="" name="" ref={inputElement} className='navbar_search_inp' placeholder='Find Your Gym...' onChange={handleChange}></input>
