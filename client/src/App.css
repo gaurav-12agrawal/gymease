@@ -566,11 +566,16 @@ input:focus {
 
 .loadingdiv {
   display: flex;
-  background-color: black;
   height: 100vh;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
+}
+
+.loading-div-image {
+  width: 200px;
+  height: 200px;
 }
 
 .fetchingdiv {
