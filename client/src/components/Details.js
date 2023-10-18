@@ -432,12 +432,12 @@ const Details = () => {
                                             {(getgymdata.price.fifdayst) &&
                                                 <button className={Detailscss.trainerbotton} onClick={() => payment(getgymdata._id, '15 days with trainer', getgymdata.price.fifdayst)} >
                                                     <div> ₹ {getgymdata.price.fifdayst} </div>
-                                                    <div >With Trainer </div>
+                                                    <div >With Cardio </div>
                                                 </button>}
                                             {(getgymdata.price.fifdays) &&
                                                 <button className={Detailscss.trainerbotton} onClick={() => payment(getgymdata._id, '15 days without trainer', getgymdata.price.fifdays)} >
                                                     <div> ₹ {getgymdata.price.fifdays} </div>
-                                                    <div >Without Trainer </div>
+                                                    <div >Without Cardio </div>
                                                 </button>
                                             }
                                         </div>
@@ -448,13 +448,13 @@ const Details = () => {
                                             {(getgymdata.price.montht) &&
                                                 <button className={Detailscss.trainerbotton} onClick={() => payment(getgymdata._id, '1 month with trainer', getgymdata.price.montht)} >
                                                     <div> ₹ {getgymdata.price.montht} </div>
-                                                    <div >With Trainer </div>
+                                                    <div >With Cardio </div>
                                                 </button>
                                             }
                                             {(getgymdata.price.month) &&
                                                 <button className={Detailscss.trainerbotton} onClick={() => payment(getgymdata._id, '1 month without trainer', getgymdata.price.month)} >
                                                     <div> ₹ {getgymdata.price.month} </div>
-                                                    <div >Without Trainer </div>
+                                                    <div >Without Cardio </div>
                                                 </button>}
 
                                         </div>}
@@ -464,12 +464,12 @@ const Details = () => {
                                             {(getgymdata.price.threemontht) &&
                                                 <button className={Detailscss.trainerbotton} onClick={() => payment(getgymdata._id, '3 month with trainer', getgymdata.price.threemontht)} >
                                                     <div> ₹ {getgymdata.price.threemontht} </div>
-                                                    <div >With Trainer </div>
+                                                    <div >With Cardio </div>
                                                 </button>
                                             }  {(getgymdata.price.threemonth) &&
                                                 <button className={Detailscss.trainerbotton} onClick={() => payment(getgymdata._id, '3 month without trainer', getgymdata.price.threemonth)} >
                                                     <div> ₹ {getgymdata.price.threemonth} </div>
-                                                    <div >Without Trainer </div>
+                                                    <div >Without Cardio </div>
                                                 </button>
                                             }
                                         </div>}
@@ -479,12 +479,12 @@ const Details = () => {
                                             {(getgymdata.price.sixmontht) &&
                                                 <button className={Detailscss.trainerbotton} onClick={() => payment(getgymdata._id, '6 month with trainer', getgymdata.price.sixmontht)} >
                                                     <div> ₹ {getgymdata.price.sixmontht} </div>
-                                                    <div >With Trainer </div>
+                                                    <div >With Cardio </div>
                                                 </button>
                                             }   {(getgymdata.price.sixmonth) &&
                                                 <button className={Detailscss.trainerbotton} onClick={() => payment(getgymdata._id, '6 month without trainer', getgymdata.price.sixmonth)} >
                                                     <div> ₹ {getgymdata.price.sixmonth} </div>
-                                                    <div >Without Trainer </div>
+                                                    <div >Without Cardio </div>
                                                 </button>
                                             }
                                         </div>}
@@ -494,11 +494,11 @@ const Details = () => {
                                             {(getgymdata.price.oneyeart) &&
                                                 <button className={Detailscss.trainerbotton} onClick={() => payment(getgymdata._id, '1 year with trainer', getgymdata.price.oneyeart)} >
                                                     <div> ₹ {getgymdata.price.oneyeart} </div>
-                                                    <div >With Trainer </div>
+                                                    <div >With Cardio </div>
                                                 </button>} {(getgymdata.price.oneyear) &&
                                                     <button className={Detailscss.trainerbotton} onClick={() => payment(getgymdata._id, '1 year without trainer', getgymdata.price.oneyear)} >
                                                         <div> ₹ {getgymdata.price.oneyear} </div>
-                                                        <div >Without Trainer </div>
+                                                        <div >Without Cardio </div>
                                                     </button>
                                             }
                                         </div>}
