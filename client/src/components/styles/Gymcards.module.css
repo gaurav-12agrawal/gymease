@@ -3,7 +3,7 @@
 
 .maincontainer {
     font-family: 'ubuntu';
-
+    height: 350px;
     display: flex;
     justify-content: center;
     border-radius: 10px;
@@ -11,7 +11,6 @@
     gap: 16px;
     padding: 20px;
     box-shadow: 0 0 11px rgba(33, 33, 33, .15);
-
     margin-top: 40px;
 }
 
@@ -152,13 +151,14 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    max-height: 250px;
 }
 
 .upperleftimage {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+
 }
 
 .lowerleft {
@@ -172,13 +172,13 @@ a {
 .lowerleft1 {
     display: flex;
     width: 33%;
-
 }
 
 .imagesdiv {
     height: 100%;
     width: 100%;
     border-radius: 10px;
+
 }
 
 .imagesdiv:hover {
