@@ -38,7 +38,7 @@ function Home() {
 
                     <div className={Detailscss.popupwindowinner}>
                         <div className={Detailscss.cross} onClick={hidepop} >< RxCross1 /></div>
-                        <img className={Detailscss.crossimage} src='https://res.cloudinary.com/dgfn40mfc/image/upload/v1685130280/Important%20image/gym1_yshefw.jpg' ></img>
+                        <img className={Detailscss.crossimage} src='https://res.cloudinary.com/dgfn40mfc/image/upload/v1702921155/Important%20image/WhatsApp_Image_2023-12-18_at_22.29.06_51795794_rdo1ek.jpg' ></img>
                     </div>
                 </div> : <p></p>}
             </div>
