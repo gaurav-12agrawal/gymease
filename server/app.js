@@ -16,6 +16,7 @@ const paymentrouter = require('./Router/paymentrouter')
 app.use(express.json());
 app.use(cors({
     origin: ["https://gymozy.com",
+        "https://gymozy.netlify.app",
         "https://gymozy.in",
         'http://localhost:3000',
         'https://localhost:3000'],
