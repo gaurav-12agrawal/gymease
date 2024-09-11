@@ -75,9 +75,6 @@ function App() {
                 <Route exact path="/" element={<Home />} />
                 <Route path="/booking" element={<Mybooking />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/aboutus" element={<Aboutus />} />
-                <Route path="/faqpage" element={<Faq />} />
-                <Route path="/privacyandpolicy" element={<Privacy />} />
                 <Route path="/details/:id" element={<Details />} />
                 <Route path="/edit/:id" element={<Editcard />} />
                 <Route path='/allcitygyms/:city' element={<Allcitygyms />} />
