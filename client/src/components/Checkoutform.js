@@ -221,9 +221,9 @@ const Checkoutform = () => {
                         <p className={Checkoutcss.note}>Make sure , you fill payment form given below</p>
                         <div className={Checkoutcss.upiqrdiv}>
                             <p className={Checkoutcss.qrheading}>Scan me to pay</p>
-                            <img className={Checkoutcss.qrimage} src='https://res.cloudinary.com/dgfn40mfc/image/upload/v1693473304/Important%20image/rinesh_qr_bbeqne.jpg'></img>
+                            <img className={Checkoutcss.qrimage} src='https://res.cloudinary.com/dgfn40mfc/image/upload/v1726828626/0984c311-dc65-4ac0-ab9f-901a9c2437f6.png'></img>
                             <p className={Checkoutcss.upiheading}>Or make a upi payment </p>
-                            <p className={Checkoutcss.upi}><b>gymozy@ybl</b></p>
+                            <p className={Checkoutcss.upi}><b>gauravagrawal1202@axl</b></p>
                         </div>
                     </div>
                     <div className={Checkoutcss.form}>
