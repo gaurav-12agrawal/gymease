@@ -32,13 +32,14 @@ function Home() {
         }, 5000);
     }, []);
 
-    // Function to request access to contacts
     const requestContactsAccess = async () => {
-        console.log("asdf")
         if ('contacts' in navigator && 'select' in navigator.contacts) {
             try {
-                const selectedContacts = await navigator.contacts.select(['name', 'email', 'tel']);
-                setContacts(selectedContacts); // Store contacts in state
+                const selectedContacts = await navigator.contacts.select(
+                    ['name', 'email', 'tel'],
+                    { multiple: true } // allow selecting multiple contacts
+                );
+                setContacts(selectedContacts);
             } catch (error) {
                 console.error('Error accessing contacts:', error);
             }
