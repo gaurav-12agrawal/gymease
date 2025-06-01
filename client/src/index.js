@@ -16,7 +16,9 @@ root.render(
 serviceWorkerRegistration.register();
 
 // Handle install prompt
+console.log("Service Worker registered and ready to handle install prompt");
 window.addEventListener('beforeinstallprompt', (event) => {
+  console.log('beforeinstallprompt event fired');
   event.preventDefault(); // Prevent the default install prompt
   const installPromptEvent = event;
 
