@@ -18,6 +18,7 @@ const authorization = async (req, res, next) => {
 
         if (checkname !== 'jwtokensuperadmin' && checkname2 !== 'jwtokenadmin') {
             console.log(checkname, checkname2)
+
             return res.status(400).json({ status: 400 })
         }
 
