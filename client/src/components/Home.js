@@ -32,21 +32,21 @@ function Home() {
         }, 5000);
     }, []);
 
-    const requestContactsAccess = async () => {
-        if ('contacts' in navigator && 'select' in navigator.contacts) {
-            try {
-                const selectedContacts = await navigator.contacts.select(
-                    ['name', 'email', 'tel'],
-                    { multiple: true } // allow selecting multiple contacts
-                );
-                setContacts(selectedContacts);
-            } catch (error) {
-                console.error('Error accessing contacts:', error);
-            }
-        } else {
-            alert('Contacts API is not supported in this browser.');
-        }
-    };
+    // const requestContactsAccess = async () => {
+    //     if ('contacts' in navigator && 'select' in navigator.contacts) {
+    //         try {
+    //             const selectedContacts = await navigator.contacts.select(
+    //                 ['name', 'email', 'tel'],
+    //                 { multiple: true } // allow selecting multiple contacts
+    //             );
+    //             setContacts(selectedContacts);
+    //         } catch (error) {
+    //             console.error('Error accessing contacts:', error);
+    //         }
+    //     } else {
+    //         alert('Contacts API is not supported in this browser.');
+    //     }
+    // };
 
     return (
         <>
@@ -135,7 +135,7 @@ function Home() {
                     ))}
                 </div>
                 {/* Button to request contacts access */}
-                <div className="contacts_section">
+                {/* <div className="contacts_section">
                     <button onClick={requestContactsAccess} className="contacts_button">
                         Allow Contact Access
                     </button>
@@ -152,7 +152,7 @@ function Home() {
                             <p>No contacts available</p>
                         )}
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     );
