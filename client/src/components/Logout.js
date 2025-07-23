@@ -13,7 +13,7 @@ const LogOut = () => {
     useEffect(() => {
         const token = document.cookie;
 
-        fetch(`/https://gym-54v4.onrender.com/logout/${token}`, {
+        fetch(`https://gym-54v4.onrender.com/logout/${token}`, {
             method: "GET",
             headers: {
                 Accept: 'application/json',
